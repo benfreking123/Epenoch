@@ -9,10 +9,13 @@ jobs:
   update_server:
     runs-on: ubuntu-latest
     steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
+
     - name: Setup SSH for EC2 Access
       uses: webfactory/ssh-agent@v0.5.3
       with:
-        ssh-private-key: ${{ secrets.SSH_PRIVATE_KEY }}
+        ssh-private-key: ${{ secrets.MINECRAFT_SERVER }}
 
     - name: Update Minecraft Server and Restart Service
       run: |
