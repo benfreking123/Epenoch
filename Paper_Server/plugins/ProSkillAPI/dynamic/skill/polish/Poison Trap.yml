@@ -1,0 +1,289 @@
+'Poison Trap': 
+  name: 'Poison Trap'
+  type: 'Active'
+  'max-level': 5
+  'skill-req-lvl': 1
+  'needs-permission': 'false'
+  'cooldown-message': 'true'
+  attributes: 
+    'level-base': '1'
+    'level-scale': '0'
+    'cost-base': '0'
+    'cost-scale': '0'
+    'cooldown-base': '5'
+    'cooldown-scale': '0'
+    'mana-base': '0'
+    'mana-scale': '0'
+    'points-spent-req-base': '0'
+    'points-spent-req-scale': '0'
+    incompatible: []
+  msg: '&6{player} &2has cast &6{skill}'
+  icon: 'JACK_O_LANTERN'
+  'icon-data': 0
+  'icon-durability': 0
+  'icon-lore': 
+  - '&fPut your description here'
+  desc: []
+  components: 
+    'Cast-0': 
+      type: 'trigger'
+      data: {}
+      preview: 
+        enabled: 'false'
+      children: 
+        Location: 
+          type: 'target'
+          data: 
+            'icon-key': ''
+            'range-base': '5'
+            'range-scale': '0'
+            entities: 'false'
+            fluids: 'false'
+            passable: 'false'
+            center: 'false'
+            group: 'enemy'
+            wall: 'false'
+            invulnerable: 'false'
+            caster: 'false'
+          preview: 
+            enabled: 'false'
+            'per-target': 'false'
+          children: 
+            Offset: 
+              type: 'target'
+              data: 
+                'icon-key': ''
+                'forward-base': '0'
+                'forward-scale': '0'
+                'upward-base': '0.5'
+                'upward-scale': '0'
+                'right-base': '0'
+                'right-scale': '0'
+                group: 'enemy'
+                wall: 'false'
+                invulnerable: 'false'
+                caster: 'false'
+              preview: 
+                enabled: 'false'
+                'per-target': 'false'
+              children: 
+                Sound: 
+                  type: 'mechanic'
+                  data: 
+                    'icon-key': ''
+                    counts: 'True'
+                    sound: 'Block barrel close'
+                    'volume-base': '400'
+                    'volume-scale': '0'
+                    'pitch-base': '1.3'
+                    'pitch-scale': '0'
+                  preview: 
+                    enabled: 'false'
+                  children: {}
+                Repeat: 
+                  type: 'mechanic'
+                  data: 
+                    'icon-key': ''
+                    counts: 'True'
+                    'repetitions-base': '600'
+                    'repetitions-scale': '0'
+                    period: '0.1'
+                    delay: '0'
+                    'stop-on-fail': 'true'
+                  preview: 
+                    enabled: 'false'
+                  children: 
+                    'Value Set': 
+                      type: 'mechanic'
+                      data: 
+                        'icon-key': ''
+                        counts: 'False'
+                        key: 'minetarget'
+                        'value-base': '0'
+                        'value-scale': '0'
+                        save: 'false'
+                      preview: 
+                        enabled: 'false'
+                      children: {}
+                    Area: 
+                      type: 'target'
+                      data: 
+                        'icon-key': ''
+                        'radius-base': '3'
+                        'radius-scale': '0'
+                        group: 'Enemy'
+                        wall: 'true'
+                        invulnerable: 'false'
+                        caster: 'False'
+                        'max-base': '3'
+                        'max-scale': '0'
+                        random: 'true'
+                      preview: 
+                        enabled: 'false'
+                        'per-target': 'false'
+                        circle: 'false'
+                        sphere: 'false'
+                      children: 
+                        'Value Add': 
+                          type: 'mechanic'
+                          data: 
+                            'icon-key': ''
+                            counts: 'False'
+                            key: 'minetarget'
+                            'amount-base': '1'
+                            'amount-scale': '0'
+                            save: 'false'
+                          preview: 
+                            enabled: 'false'
+                          children: {}
+                    Value: 
+                      type: 'condition'
+                      data: 
+                        'icon-key': ''
+                        key: 'minetarget'
+                        'min-value-base': '0'
+                        'min-value-scale': '0'
+                        'max-value-base': '0'
+                        'max-value-scale': '0'
+                      preview: 
+                        enabled: 'false'
+                      children: 
+                        'Value Set': 
+                          type: 'mechanic'
+                          data: 
+                            'icon-key': ''
+                            counts: 'True'
+                            key: 'minetarget'
+                            'value-base': '0'
+                            'value-scale': '0'
+                            save: 'false'
+                          preview: 
+                            enabled: 'false'
+                          children: {}
+                    Else: 
+                      type: 'condition'
+                      data: 
+                        'icon-key': ''
+                      preview: 
+                        enabled: 'false'
+                      children: 
+                        Particle: 
+                          type: 'mechanic'
+                          data: 
+                            'icon-key': ''
+                            counts: 'False'
+                            particle: 'Explosion huge'
+                            arrangement: 'Sphere'
+                            'radius-base': '0.01'
+                            'radius-scale': '0'
+                            'particles-base': '1'
+                            'particles-scale': '0'
+                            'visible-radius': '128'
+                            dx: '0'
+                            dy: '0'
+                            dz: '0'
+                            amount: '1'
+                            speed: '0.1'
+                            forward: '0'
+                            upward: '0.2'
+                            right: '0'
+                          preview: 
+                            enabled: 'false'
+                          children: {}
+                        Sound: 
+                          type: 'mechanic'
+                          data: 
+                            'icon-key': ''
+                            counts: 'False'
+                            sound: 'Entity generic explode'
+                            'volume-base': '400'
+                            'volume-scale': '0'
+                            'pitch-base': '1'
+                            'pitch-scale': '0'
+                          preview: 
+                            enabled: 'false'
+                          children: {}
+                        Area: 
+                          type: 'target'
+                          data: 
+                            'icon-key': ''
+                            'radius-base': '3'
+                            'radius-scale': '0'
+                            group: 'Enemy'
+                            wall: 'true'
+                            invulnerable: 'false'
+                            caster: 'False'
+                            'max-base': '3'
+                            'max-scale': '0'
+                            random: 'true'
+                          preview: 
+                            enabled: 'false'
+                            'per-target': 'false'
+                            circle: 'false'
+                            sphere: 'false'
+                          children: 
+                            Damage: 
+                              type: 'mechanic'
+                              data: 
+                                'icon-key': 'Skill'
+                                counts: 'False'
+                                type: 'Damage'
+                                'value-base': '1'
+                                'value-scale': '0'
+                                true: 'true'
+                                classifier: 'skill'
+                                knockback: 'true'
+                              preview: 
+                                enabled: 'false'
+                              children: {}
+                            Potion: 
+                              type: 'mechanic'
+                              data: 
+                                'icon-key': ''
+                                counts: 'true'
+                                potion: 'Poison'
+                                ambient: 'true'
+                                'tier-base': '1'
+                                'tier-scale': '0'
+                                'seconds-base': '3'
+                                'seconds-scale': '1'
+                              preview: 
+                                enabled: 'false'
+                              children: {}
+                    'Particle Animation': 
+                      type: 'mechanic'
+                      data: 
+                        'icon-key': ''
+                        counts: 'False'
+                        steps: '8'
+                        frequency: '0.05'
+                        angle: '360'
+                        start: '0'
+                        'duration-base': '0.1'
+                        'duration-scale': '0'
+                        'h-translation-base': '0'
+                        'h-translation-scale': '0'
+                        'v-translation-base': '0'
+                        'v-translation-scale': '0'
+                        'h-cycles': '1'
+                        'v-cycles': '1'
+                        particle: 'Slime'
+                        arrangement: 'Circle'
+                        direction: 'XZ'
+                        'radius-base': '0.01'
+                        'radius-scale': '0'
+                        'particles-base': '1'
+                        'particles-scale': '0'
+                        'visible-radius': '128'
+                        dx: '0'
+                        dy: '0'
+                        dz: '0'
+                        amount: '1'
+                        speed: '0.02'
+                        forward: '2'
+                        upward: '0.5'
+                        right: '0'
+                        '-with-rotation': 'true'
+                      preview: 
+                        enabled: 'false'
+                      children: {}

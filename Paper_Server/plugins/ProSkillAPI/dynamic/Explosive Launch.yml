@@ -1,0 +1,123 @@
+Explosive Launch:
+  name: Explosive Launch
+  type: Movement
+  max-level: 5
+  skill-req-lvl: 0
+  needs-permission: "false"
+  cooldown-message: "true"
+  msg: "&6{player} &2has cast &6{skill}"
+  icon: Pumpkin
+  icon-data: 0
+  icon-lore:
+    - "&d{name} &7({level}/{max})"
+    - "&2Type: &6{type}"
+    - ""
+    - "{req:level}Level: {attr:level}"
+    - "{req:cost}Cost: {attr:cost}"
+    - ""
+    - "&2Mana: {attr:mana}"
+    - "&2Cooldown: {attr:cooldown}"
+  attributes:
+    level-base: "1"
+    level-scale: "0"
+    cost-base: "1"
+    cost-scale: "0"
+    cooldown-base: "0"
+    cooldown-scale: "0"
+    mana-base: "0"
+    mana-scale: "0"
+    points-spent-req-base: "0"
+    points-spent-req-scale: "0"
+    incompatible: []
+  components:
+    Cast:
+      type: trigger
+      comment: ""
+      children:
+        Value Attribute:
+          type: mechanic
+          comment: ""
+          data:
+            icon-key: ""
+            counts: "true"
+            key: movespeed
+            attribute: player_move_speed_mod
+            save: false
+        Value Multiply:
+          type: mechanic
+          comment: ""
+          data:
+            icon-key: ""
+            counts: "true"
+            key: movespeed
+            multiplier-base: "4"
+            multiplier-scale: "0"
+            save: false
+        Particle:
+          type: mechanic
+          comment: ""
+          data:
+            icon-key: ""
+            counts: "true"
+            particle: Explosion huge
+            arrangement: Sphere
+            radius-base: "1"
+            radius-scale: "0"
+            particles-base: "20"
+            particles-scale: "0"
+            visible-radius: "25"
+            dx: "0"
+            dy: "0"
+            dz: "0"
+            amount: "1"
+            speed: "0.1"
+            forward: "0"
+            upward: "0"
+            right: "0"
+        Area:
+          type: target
+          comment: ""
+          preview:
+            enabled: "false"
+            per-target: false
+            circle: false
+            sphere: false
+          data:
+            icon-key: ""
+            radius-base: "3"
+            radius-scale: "0"
+            group: Enemy
+            wall: false
+            invulnerable: false
+            caster: "False"
+            max-base: "99"
+            max-scale: "0"
+            random: false
+          children:
+            Damage:
+              type: mechanic
+              comment: ""
+              data:
+                icon-key: ""
+                counts: "true"
+                type: Damage
+                value-base: "3"
+                value-scale: "1"
+                "true": false
+                classifier: default
+                knockback: true
+                cause: Custom
+        Launch:
+          type: mechanic
+          comment: ""
+          data:
+            icon-key: ""
+            counts: "true"
+            relative: Caster
+            reset-y: false
+            forward-base: "2"
+            forward-scale: "0"
+            upward-base: movespeed
+            upward-scale: "0.5"
+            right-base: "0"
+            right-scale: "0"

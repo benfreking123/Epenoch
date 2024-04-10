@@ -1,0 +1,38 @@
+limit: 3
+active: 1
+health: 504.5899963378906
+mana: 866.0
+accounts: 
+  acc1: 
+    classes: 
+      Mage: 
+        level: 120
+        points: 4
+        exp: 0.0
+    skills: 
+      Lightning: 
+        level: 10
+      Clear: 
+        level: 4
+      Roll: 
+        level: 5
+      'Group Heal': 
+        level: 5
+      'Smoke Bomb': 
+        level: 5
+      Fireball: 
+        level: 10
+      'Poison Damage': 
+        level: 1
+    binds: {}
+    'attrib-points': 0
+    attribs: {}
+    attrstages: {}
+    'text-layout': 
+      0: 'Fireball'
+      1: 'Lightning'
+      2: 'Roll'
+      3: 'Smoke Bomb'
+      4: 'Group Heal'
+    hunger: 1.0
+    persistent: {}

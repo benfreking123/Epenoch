@@ -1,0 +1,129 @@
+'Smoke Bomb': 
+  name: 'Smoke Bomb'
+  type: 'Dynamic'
+  'max-level': 5
+  'skill-req-lvl': 0
+  'needs-permission': 'false'
+  'cooldown-message': 'true'
+  attributes: 
+    'level-base': '1'
+    'level-scale': '0'
+    'cost-base': '1'
+    'cost-scale': '0'
+    'cooldown-base': '3'
+    'cooldown-scale': '0'
+    'mana-base': '0'
+    'mana-scale': '0'
+    'points-spent-req-base': '0'
+    'points-spent-req-scale': '0'
+    incompatible: []
+  msg: '&6{player} &2has cast &6{skill}'
+  icon: 'PUMPKIN'
+  'icon-data': 0
+  'icon-durability': 0
+  'icon-lore': 
+  - '&d{name} &7({level}/{max})'
+  - '&2Type: &6{type}'
+  - 'Throw a smoke bomb that makes targets in area invisible.'
+  - '{req:level}Level: {attr:level}'
+  - '{req:cost}Cost: {attr:cost}'
+  - 'Range: {attr:range.Range}'
+  - 'Radius: {attr:radius.Radius}'
+  - ''
+  - '&2Mana: {attr:mana}'
+  - '&2Cooldown: {attr:cooldown}'
+  desc: []
+  components: 
+    'Cast-0': 
+      type: 'trigger'
+      data: {}
+      preview: 
+        enabled: 'false'
+      children: 
+        Location: 
+          type: 'target'
+          data: 
+            'icon-key': 'range'
+            'range-base': '10'
+            'range-scale': '0'
+            entities: 'true'
+            fluids: 'false'
+            passable: 'true'
+            center: 'false'
+            group: 'enemy'
+            wall: 'false'
+            invulnerable: 'false'
+            caster: 'false'
+          preview: 
+            enabled: 'false'
+            'per-target': 'false'
+          children: 
+            Area: 
+              type: 'target'
+              data: 
+                'icon-key': 'radius'
+                'radius-base': '3'
+                'radius-scale': '0'
+                group: 'Both'
+                wall: 'false'
+                invulnerable: 'false'
+                caster: 'In area'
+                'max-base': '99'
+                'max-scale': '0'
+                random: 'false'
+              preview: 
+                enabled: 'false'
+                'per-target': 'false'
+                circle: 'false'
+                sphere: 'false'
+              children: 
+                Potion: 
+                  type: 'mechanic'
+                  data: 
+                    'icon-key': ''
+                    counts: 'true'
+                    potion: 'Invisibility'
+                    ambient: 'true'
+                    'tier-base': '1'
+                    'tier-scale': '0'
+                    'seconds-base': '3'
+                    'seconds-scale': '1'
+                  preview: 
+                    enabled: 'false'
+                  children: {}
+                'Particle Animation': 
+                  type: 'mechanic'
+                  data: 
+                    'icon-key': ''
+                    counts: 'true'
+                    steps: '1'
+                    frequency: '0.05'
+                    angle: '0'
+                    start: '0'
+                    'duration-base': '3'
+                    'duration-scale': '0'
+                    'h-translation-base': '0'
+                    'h-translation-scale': '0'
+                    'v-translation-base': '0'
+                    'v-translation-scale': '0'
+                    'h-cycles': '1'
+                    'v-cycles': '1'
+                    particle: 'Smoke normal'
+                    arrangement: 'Sphere'
+                    'radius-base': '2'
+                    'radius-scale': '0'
+                    'particles-base': '20'
+                    'particles-scale': '0'
+                    'visible-radius': '25'
+                    dx: '0'
+                    dy: '0'
+                    dz: '0'
+                    amount: '1'
+                    speed: '0.1'
+                    forward: '0'
+                    upward: '0'
+                    right: '0'
+                    '-with-rotation': 'false'
+                  preview: 
+                    enabled: 'false'
+                  children: {}

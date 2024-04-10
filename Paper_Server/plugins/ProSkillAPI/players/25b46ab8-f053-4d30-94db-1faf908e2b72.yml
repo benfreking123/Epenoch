@@ -1,0 +1,32 @@
+limit: 3
+active: 1
+health: 69.0
+mana: 65.0
+accounts: 
+  acc1: 
+    classes: 
+      Hunter: 
+        level: 11
+        points: 1
+        exp: 0.0
+    skills: 
+      Roll: 
+        level: 3
+      Clear: 
+        level: 0
+      'Smoke Bomb': 
+        level: 3
+      'Summon Throwing Dagger': 
+        level: 1
+    binds: {}
+    'attrib-points': 8
+    attribs: 
+      vitality: 2
+    attrstages: 
+      vitality: 2
+    'text-layout': 
+      0: 'Summon Throwing Dagger'
+      1: 'Smoke Bomb'
+      2: 'Roll'
+    hunger: 1.0
+    persistent: {}

@@ -1,0 +1,79 @@
+limit: 10
+active: 2
+health: 20.0
+mana: 82.0
+accounts: 
+  acc1: 
+    classes: {}
+    skills: {}
+    binds: {}
+    'attrib-points': 2
+    attribs: {}
+    attrstages: {}
+    'text-layout': {}
+    hunger: 1.0
+    persistent: {}
+  acc2: 
+    classes: 
+      base_class: 
+        level: 1
+        points: 0
+        exp: 0.0
+    skills: 
+      'Explosive Bomb': 
+        level: 1
+      'Fire Skill Burst': 
+        level: 0
+      'Scatter Bolt': 
+        level: 1
+      'Poison Burst': 
+        level: 1
+    binds: {}
+    'attrib-points': 314
+    attribs: 
+      bomb_percent_aoe_mod: 600
+      explosive_base_damage_mod: 10
+      spirit: 82
+      bomb_percent_range_mod: 0
+      bomb_quantity_mod: 1
+      explosive_aoe_mod: 299
+      bomb_cooldown_mod: 33
+      intelligence: 27
+      bomb_base_damage_mod: 10
+      explosive_cooldown_mod: 33
+      bomb_percent_damage_mod: 100
+      explosive_percent_aoe_mod: 300
+      explosive_percent_damage_mod: 100
+    attrstages: 
+      poison_base_dmg_mod: 0
+      bomb_percent_aoe_mod: 600
+      explosive_base_damage_mod: 10
+      strength: 0
+      poison_percent_cooldown_mod: 0
+      spirit: 82
+      player_base_damage_mod: 0
+      bomb_percent_range_mod: 0
+      bomb_quantity_mod: 1
+      explosive_aoe_mod: 299
+      bomb_cooldown_mod: 33
+      projectile_percent_cooldown_mod: 0
+      projectile_percent_damage_mod: 0
+      intelligence: 27
+      bomb_base_damage_mod: 10
+      player_percent_damage_mod: 0
+      poison_duration_mod: 0
+      projectile_base_damage_mod: 0
+      explosive_cooldown_mod: 33
+      bomb_percent_damage_mod: 100
+      poison_percent_dmg_mod: 0
+      player_percent_cooldown_mod: 0
+      explosive_percent_aoe_mod: 300
+      explosive_percent_damage_mod: 100
+    'text-layout': 
+      0: 'Poison Burst'
+    hunger: 1.0
+    persistent: 
+      test_poison_dmg: '0.0'
+      poison_percent_cooldown_mod: '0.0'
+      projectile_percent_cooldown_mod: '0.0'
+      player_percent_cooldown_mod: '0.0'

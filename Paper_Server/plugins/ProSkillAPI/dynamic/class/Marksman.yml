@@ -1,0 +1,62 @@
+Marksman: 
+  name: 'Marksman'
+  'action-bar': ''
+  prefix: '&Tower Guard'
+  group: 'class'
+  mana: '&2Mana'
+  'max-level': 80
+  parent: 'Ninja'
+  'needs-permission': 'false'
+  attributes: 
+    'health-base': '30'
+    'health-scale': '2'
+    'mana-base': '15'
+    'mana-scale': '3'
+    'vitality-base': '5'
+    'vitality-scale': '2'
+    'spirit-base': '3'
+    'spirit-scale': '4'
+    'intelligence-base': '2'
+    'intelligence-scale': '4'
+    'dexterity-base': '4'
+    'dexterity-scale': '4'
+    'strength-base': '3'
+    'strength-scale': '4'
+  'mana-regen': 3.0
+  'skill-tree': 'REQUIREMENT'
+  blacklist: []
+  skills: 
+  - 'Fireball'
+  - 'Summon Throwing Dagger'
+  - 'Pep Talk'
+  icon: 'PUMPKIN'
+  'icon-data': 0
+  'icon-durability': 0
+  'icon-lore': 
+  - 'Marksman'
+  'exp-source': 273
+  'combo-starters': 
+    L: 
+      inverted: 'true'
+      whitelist: []
+    RS: 
+      inverted: 'true'
+      whitelist: []
+    S: 
+      inverted: 'true'
+      whitelist: []
+    Q: 
+      inverted: 'true'
+      whitelist: []
+    P: 
+      inverted: 'true'
+      whitelist: []
+    LS: 
+      inverted: 'true'
+      whitelist: []
+    R: 
+      inverted: 'true'
+      whitelist: []
+    F: 
+      inverted: 'true'
+      whitelist: []

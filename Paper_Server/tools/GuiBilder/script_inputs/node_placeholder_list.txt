@@ -1,0 +1,6 @@
+player_percent_range_mod
+player_percent_damage_mod
+poison_base_dmg_mod
+poison_percent_dmg_mod
+poison_tier_mod
+poison_duration_mod

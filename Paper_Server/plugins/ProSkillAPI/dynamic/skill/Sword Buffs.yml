@@ -1,0 +1,136 @@
+'Sword Buffs': 
+  name: 'Sword Buffs'
+  type: 'Dynamic'
+  'max-level': 5
+  'skill-req-lvl': 0
+  'needs-permission': 'false'
+  'cooldown-message': 'true'
+  attributes: 
+    'level-base': '1'
+    'level-scale': '0'
+    'cost-base': '1'
+    'cost-scale': '0'
+    'cooldown-base': '0'
+    'cooldown-scale': '0'
+    'mana-base': '0'
+    'mana-scale': '0'
+    'points-spent-req-base': '0'
+    'points-spent-req-scale': '0'
+    incompatible: []
+  msg: '&6{player} &2has cast &6{skill}'
+  icon: 'PUMPKIN'
+  'icon-data': 0
+  'icon-durability': 0
+  'icon-lore': 
+  - '&d{name} &7({level}/{max})'
+  - '&2Type: &6{type}'
+  - ''
+  - '{req:level}Level: {attr:level}'
+  - '{req:cost}Cost: {attr:cost}'
+  - ''
+  - '&2Mana: {attr:mana}'
+  - '&2Cooldown: {attr:cooldown}'
+  desc: []
+  components: 
+    'Left Click': 
+      type: 'trigger'
+      data: 
+        mana: 'false'
+        cooldown: 'false'
+        crouch: 'Crouch'
+      preview: 
+        enabled: 'false'
+      children: 
+        Item: 
+          type: 'condition'
+          data: 
+            'icon-key': ''
+            'check-mat': 'true'
+            material: 'Iron sword'
+            'check-data': 'false'
+            'check-custom-data': 'false'
+            'check-lore': 'false'
+            'check-name': 'false'
+            regex: 'false'
+          preview: 
+            enabled: 'false'
+          children: 
+            Single: 
+              type: 'target'
+              data: 
+                'icon-key': ''
+                'range-base': '2'
+                'range-scale': '0'
+                'tolerance-base': '0'
+                'tolerance-scale': '0'
+                group: 'Enemy'
+                wall: 'false'
+                invulnerable: 'false'
+                caster: 'false'
+              preview: 
+                enabled: 'false'
+                'per-target': 'false'
+                line: 'false'
+                cylinder: 'false'
+              children: 
+                Explosion: 
+                  type: 'mechanic'
+                  data: 
+                    'icon-key': ''
+                    counts: 'true'
+                    'power-base': '3'
+                    'power-scale': '0'
+                    damage: 'false'
+                    fire: 'false'
+                  preview: 
+                    enabled: 'false'
+                  children: {}
+        'Item-b': 
+          type: 'condition'
+          data: 
+            'icon-key': ''
+            'check-mat': 'true'
+            material: 'Diamond sword'
+            'check-data': 'false'
+            'check-custom-data': 'false'
+            'check-lore': 'false'
+            'check-name': 'false'
+            regex: 'false'
+          preview: 
+            enabled: 'false'
+          children: 
+            Single: 
+              type: 'target'
+              data: 
+                'icon-key': ''
+                'range-base': '2'
+                'range-scale': '0'
+                'tolerance-base': '0'
+                'tolerance-scale': '0'
+                group: 'Enemy'
+                wall: 'false'
+                invulnerable: 'false'
+                caster: 'false'
+              preview: 
+                enabled: 'false'
+                'per-target': 'false'
+                line: 'false'
+                cylinder: 'false'
+              children: 
+                Lightning: 
+                  type: 'mechanic'
+                  data: 
+                    'icon-key': ''
+                    counts: 'true'
+                    'damage-base': '10'
+                    'damage-scale': '0'
+                    group: 'Enemy'
+                    caster: 'false'
+                    fire: 'false'
+                    'forward-base': '0'
+                    'forward-scale': '0'
+                    'right-base': '0'
+                    'right-scale': '0'
+                  preview: 
+                    enabled: 'false'
+                  children: {}

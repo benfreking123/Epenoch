@@ -1,0 +1,173 @@
+'Poison Darts': 
+  name: 'Poison Darts'
+  type: 'Dynamic'
+  'max-level': 5
+  'skill-req-lvl': 0
+  'needs-permission': 'false'
+  'cooldown-message': 'true'
+  attributes: 
+    'level-base': '1'
+    'level-scale': '0'
+    'cost-base': '1'
+    'cost-scale': '0'
+    'cooldown-base': '5'
+    'cooldown-scale': '0'
+    'mana-base': '0'
+    'mana-scale': '0'
+    'points-spent-req-base': '0'
+    'points-spent-req-scale': '0'
+    incompatible: []
+  msg: '&6{player} &2has cast &6{skill}'
+  icon: 'TIPPED_ARROW'
+  'icon-data': 0
+  'icon-durability': 0
+  'icon-lore': 
+  - '&d{name}'
+  - '&2Projectile(&750%&2), Poison(&750%&2)'
+  - ''
+  - '&2Mana: {attr:mana}'
+  - '&2Cooldown: {attr:cooldown}'
+  desc: []
+  components: 
+    'Cast-0': 
+      type: 'trigger'
+      data: {}
+      preview: 
+        enabled: 'false'
+      children: 
+        Cooldown: 
+          type: 'mechanic'
+          data: 
+            'icon-key': 'poison_cooldown'
+            counts: 'true'
+            skill: 'all'
+            type: 'Percent'
+            'value-base': '0'
+            'value-scale': '0'
+          preview: 
+            enabled: 'false'
+          children: {}
+        'Value Set': 
+          type: 'mechanic'
+          data: 
+            'icon-key': 'poison_damage_value'
+            counts: 'true'
+            key: 'poison_damage'
+            'value-base': '1'
+            'value-scale': '0'
+            save: 'false'
+          preview: 
+            enabled: 'false'
+          children: {}
+        Cone: 
+          type: 'target'
+          data: 
+            'icon-key': ''
+            'range-base': '5'
+            'range-scale': '0'
+            'angle-base': '90'
+            'angle-scale': '0'
+            'reset-y': 'true'
+            group: 'Enemy'
+            wall: 'false'
+            invulnerable: 'false'
+            caster: 'False'
+            'max-base': '99'
+            'max-scale': '0'
+          preview: 
+            enabled: 'false'
+            'per-target': 'false'
+            triangle: 'false'
+            cone: 'false'
+          children: 
+            Damage: 
+              type: 'mechanic'
+              data: 
+                'icon-key': ''
+                counts: 'true'
+                type: 'Damage'
+                'value-base': 'poison_damage'
+                'value-scale': '0'
+                true: 'false'
+                classifier: 'PRORPGITEMS_poison'
+                knockback: 'false'
+                cause: 'Custom'
+              preview: 
+                enabled: 'false'
+              children: {}
+            Delay: 
+              type: 'mechanic'
+              data: 
+                'icon-key': ''
+                counts: 'true'
+                'delay-base': '0.01'
+                'delay-scale': '0'
+              preview: 
+                enabled: 'false'
+              children: 
+                Damage: 
+                  type: 'mechanic'
+                  data: 
+                    'icon-key': 'projectile_damage'
+                    counts: 'true'
+                    type: 'Damage'
+                    'value-base': '1'
+                    'value-scale': '1'
+                    true: 'false'
+                    classifier: 'PRORPGITEMS_projectile'
+                    knockback: 'true'
+                    cause: 'Contact'
+                  preview: 
+                    enabled: 'false'
+                  children: {}
+            Potion: 
+              type: 'mechanic'
+              data: 
+                'icon-key': ''
+                counts: 'true'
+                potion: 'Poison'
+                ambient: 'true'
+                'tier-base': '1'
+                'tier-scale': '0'
+                'seconds-base': '3'
+                'seconds-scale': '1'
+              preview: 
+                enabled: 'false'
+              children: {}
+        Particle: 
+          type: 'mechanic'
+          data: 
+            'icon-key': ''
+            counts: 'true'
+            particle: 'Slime'
+            arrangement: 'Sphere'
+            'radius-base': '10'
+            'radius-scale': '0'
+            'particles-base': '20'
+            'particles-scale': '0'
+            'visible-radius': '25'
+            dx: '0'
+            dy: '0'
+            dz: '0'
+            amount: '1'
+            speed: '0.1'
+            forward: '0'
+            upward: '0'
+            right: '0'
+          preview: 
+            enabled: 'false'
+          children: {}
+        'Value Lore': 
+          type: 'mechanic'
+          data: 
+            'icon-key': ''
+            counts: 'true'
+            key: 'lore'
+            hand: 'Main'
+            regex: 'Damage: {value}'
+            'multiplier-base': '1'
+            'multiplier-scale': '0'
+            save: 'false'
+          preview: 
+            enabled: 'false'
+          children: {}

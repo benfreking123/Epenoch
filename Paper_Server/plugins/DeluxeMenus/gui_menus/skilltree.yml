@@ -1,0 +1,67 @@
+#
+# Requirements tutorial menu v1.0
+# authors: clip
+#
+# contributor: Andre_601
+#
+# In this tutorial you will learn all about menu requirements
+# Requirements allow you to restrict actions or even an entire menu to specific players.
+#
+# You can read more about requirements here:
+#   https://wiki.helpch.at/clips-plugins/deluxemenus/options-and-configurations/requirements
+#
+menu_title: 'Requirements Menu'
+open_command: skilltree
+size: 27
+#
+# as always, only cool people can open this menu :)
+#
+open_requirement:
+  requirements:
+    permission:
+      #
+      # "has permission" checks if a player has the required permission
+      #
+      # Read more:
+      #   https://wiki.helpch.at/clips-plugins/deluxemenus/options-and-configurations/requirements#has-permission
+      #
+      type: has permission
+      permission: deluxemenus.shop
+      deny_commands:
+        - '[message] &cYou don''t have permission to do that!'
+items:
+      dynamic_skill:
+        material: 'DYNAMIC'
+        slot: 10
+        display_name: 'DYNAMIC'
+        lore:
+          - 'DYNAMIC'
+        dynamic: true
+        display_conditions:
+          not_purchased:
+            #condition: 'has_permission: skilltree.skill1.not_bought'
+            display:
+              material: IRON_SWORD
+              display_name: '&cSkill 1 - Locked'
+              lore:
+                - '&7Purchase to unlock this skill.'
+          purchased:
+            condition: 'has_permission: skilltree.skill1.bought'
+            display:
+              material: DIAMOND_SWORD
+              display_name: '&aSkill 1 - Unlocked'
+              lore:
+                - '&7This skill is unlocked.'
+      skill_2:
+        material: ENCHANTED_BOOK
+        slot: 11
+        display_name: '&bSecond Skill'
+        lore:
+          - '&7Requires First Skill.'
+          - '&eClick to unlock if you have enough points.'
+        requirements:
+          - 'has_permission: skilltree.skill1.bought'
+          - 'placeholderapi: %sapi_default_currentavailableskillpoints% > 1'
+        left_click_commands:
+          - 'console: give %player_name% enchanted_book 1'
+          - 'console: lp user %player_name% permission set skilltree.skill2.bought true'

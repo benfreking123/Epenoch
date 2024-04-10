@@ -1,0 +1,47 @@
+physical:
+  priority: 100
+  name: Physical Defense
+  format: '&6▸ %name%: &f%value% %condition%'
+  block-damage-types:
+  - physical
+  protection-factor: 0.8
+
+magical:
+  priority: 10
+  name: Magical Defense
+  format: '&d▸ %name%: &f%value% %condition%'
+  block-damage-types:
+  - magical
+  protection-factor: 0.8
+
+bomb:
+  priority: 10
+  name: Bomb Defense
+  format: '&c▸ %name%: &f%value% %condition%'
+  block-damage-types:
+  - bomb
+  protection-factor: 0.8
+
+poison:
+  priority: 10
+  name: Poison Defense
+  format: '&a▸ %name%: &f%value% %condition%'
+  block-damage-types:
+  - poison
+  protection-factor: 0.8
+
+explosive:
+  priority: 10
+  name: Explosive Defense
+  format: '&9▸ %name%: &f%value% %condition%'
+  block-damage-types:
+  - explosive
+  protection-factor: 0.8
+
+projectile:
+  priority: 10
+  name: Projectile Defense
+  format: '&9▸ %name%: &f%value% %condition%'
+  block-damage-types:
+  - projectile
+  protection-factor: 0.8

@@ -1,0 +1,5 @@
+strength
+vitality
+dexterity
+intelligence
+spirit

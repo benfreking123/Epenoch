@@ -1,0 +1,123 @@
+Lightning: 
+  name: 'Lightning'
+  type: 'Area Obliterator'
+  'max-level': 10
+  'skill-req-lvl': 0
+  'needs-permission': 'false'
+  'cooldown-message': 'true'
+  attributes: 
+    'level-base': '1'
+    'level-scale': '0'
+    'cost-base': '2'
+    'cost-scale': '0'
+    'cooldown-base': '9'
+    'cooldown-scale': '-9'
+    'mana-base': '0'
+    'mana-scale': '0'
+    'points-spent-req-base': '0'
+    'points-spent-req-scale': '0'
+    incompatible: []
+  msg: '&6{player} &2has cast &6{skill}'
+  icon: 'PUMPKIN'
+  'icon-data': 0
+  'icon-durability': 0
+  'icon-lore': 
+  - '&d{name} &7({level}/{max})'
+  - '&2Type: &6{type}'
+  - ''
+  - '{req:level}Level: {attr:level}'
+  - '{req:cost}Cost: {attr:cost}'
+  - ''
+  - '&2Mana: {attr:mana}'
+  - '&2Cooldown: {attr:cooldown}'
+  - ''
+  - '&cDamage: {attr:damage.value}'
+  desc: []
+  components: 
+    'Cast-0': 
+      type: 'trigger'
+      data: {}
+      preview: 
+        enabled: 'false'
+      children: 
+        Projectile: 
+          type: 'mechanic'
+          data: 
+            'icon-key': ''
+            counts: 'true'
+            projectile: 'Arrow'
+            flaming: 'true'
+            cost: 'None'
+            'override-item': 'false'
+            homing: 'true'
+            target: 'Nearest'
+            'homing-distance-base': '4'
+            'homing-distance-scale': '0'
+            'correction-base': '4'
+            'correction-scale': '0'
+            wall: 'false'
+            'velocity-base': '3'
+            'velocity-scale': '0'
+            'lifespan-base': '10'
+            'lifespan-scale': '0'
+            'on-expire': 'true'
+            spread: 'Cone'
+            'amount-base': '1'
+            'amount-scale': '0'
+            'angle-base': '30'
+            'angle-scale': '0'
+            'forward-base': '0'
+            'forward-scale': '0'
+            'upward-base': '0'
+            'upward-scale': '0'
+            'right-base': '0'
+            'right-scale': '0'
+            particle: 'Electric spark'
+            arrangement: 'Hemisphere'
+            'radius-base': '1'
+            'radius-scale': '0'
+            'particles-base': '20'
+            'particles-scale': '0'
+            'visible-radius': '25'
+            dx: '0'
+            dy: '0'
+            dz: '0'
+            amount: '1'
+            speed: '0.1'
+            'use-effect': 'false'
+          preview: 
+            enabled: 'false'
+            period: '5'
+            'per-target': 'false'
+            path: 'false'
+          children: 
+            Lightning: 
+              type: 'mechanic'
+              data: 
+                'icon-key': ''
+                counts: 'true'
+                'damage-base': '10'
+                'damage-scale': '0'
+                group: 'Enemy'
+                caster: 'false'
+                fire: 'true'
+                'forward-base': '0'
+                'forward-scale': '0'
+                'right-base': '0'
+                'right-scale': '0'
+              preview: 
+                enabled: 'false'
+              children: 
+                Sound: 
+                  type: 'mechanic'
+                  data: 
+                    'icon-key': ''
+                    counts: 'true'
+                    sound: 'Weather rain above'
+                    'volume-base': '100'
+                    'volume-scale': '0'
+                    'pitch-base': '1'
+                    'pitch-scale': '0'
+                  preview: 
+                    enabled: 'false'
+                  children: {}

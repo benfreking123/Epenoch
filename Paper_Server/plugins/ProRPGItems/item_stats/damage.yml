@@ -1,0 +1,105 @@
+_vanilla_generic:
+  priority: 50
+  name: 'Generic'
+  format: '&6⚔ %name%: &f%value% %condition%'
+  attached-damage-causes:
+  - DROWNING
+  - STARVATION
+  - SUFFOCATION
+  - SUICIDE
+  - THORNS
+  - VOID
+  on-hit-actions: {}
+  biome-damage-modifier: {}
+  entity-type-modifier: {}
+  mythic-mob-faction-modifier: {}
+
+physical:
+  priority: 1000
+  name: Physical Damage
+  format: '&6⚔ %name%: &f%value% %condition%'
+  attached-damage-causes: []
+  on-hit-actions: {}
+  biome-damage-modifier:
+    PLAINS: 1.0
+  entity-type-modifier:
+    PIG: 1.0
+  mythic-mob-faction-modifier:
+    faction: 1.0
+
+spell:
+  priority: 10
+  name: Spell Damage
+  format: '&d⚡ %name%: &f%value% %condition%'
+  attached-damage-causes:
+  - DRAGON_BREATH
+  - LIGHTNING
+  - MAGIC
+  - WITHER
+  on-hit-actions: {}
+  biome-damage-modifier:
+    PLAINS: 1.0
+  entity-type-modifier:
+    PIG: 1.0
+  mythic-mob-faction-modifier:
+    faction: 1.0
+
+poison:
+  priority: 10
+  name: Poison Damage
+  format: '&a☣ %name%: &f%value% %condition%'
+  attached-damage-causes:
+  - POISON
+  on-hit-actions: {}
+  biome-damage-modifier:
+    PLAINS: 1.0
+    SWAMPLAND: 1.25
+  entity-type-modifier:
+    PIG: 1.0
+  mythic-mob-faction-modifier:
+    faction: 1.0
+
+projectile:
+  priority: 10
+  name: Projectile Damage
+  format: '&a☣ %name%: &f%value% %condition%'
+  attached-damage-causes:
+  - POISON
+  on-hit-actions: {}
+  biome-damage-modifier:
+    PLAINS: 1.0
+    SWAMPLAND: 1.25
+  entity-type-modifier:
+    PIG: 1.0
+  mythic-mob-faction-modifier:
+    faction: 1.0
+
+explosive:
+  priority: 10
+  name: Explosive Damage
+  format: '&a☣ %name%: &f%value% %condition%'
+  attached-damage-causes:
+  - BLOCK_EXPLOSION
+  on-hit-actions: {}
+  biome-damage-modifier:
+    PLAINS: 1.0
+    SWAMPLAND: 1.25
+  entity-type-modifier:
+    PIG: 1.0
+  mythic-mob-faction-modifier:
+    faction: 1.0
+
+bomb:
+  priority: 10
+  name: Bomb Damage
+  format: '&a☣ %name%: &f%value% %condition%'
+  attached-damage-causes:
+  - CONTACT
+  on-hit-actions: {}
+  biome-damage-modifier:
+    PLAINS: 1.0
+    SWAMPLAND: 1.25
+  entity-type-modifier:
+    PIG: 1.0
+  mythic-mob-faction-modifier:
+    faction: 1.0

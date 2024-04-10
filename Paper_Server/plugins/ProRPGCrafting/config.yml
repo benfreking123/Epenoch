@@ -1,0 +1,64 @@
+recursive_level_formula: floor(n+300^(n/7)^2)
+final_level_mod: floor(x)/4
+data_save_interval: 12000
+forget:
+  penalty: 0.2
+types:
+- name: craft
+  icon: paper
+  pattern:
+    pattern:
+    - =========
+    - =========
+    - =========
+    - =========
+    - =========
+    - <0000000>
+    commands: {}
+    items:
+      '0':
+        material: STONE
+        amount: 1
+        durability: 0
+        unbreakable: false
+        name: ''
+        lore: []
+        flags: []
+        enchants: {}
+        data: null
+      <:
+        material: BOOK
+        amount: 1
+        durability: 0
+        unbreakable: false
+        name: Prev page
+        lore: []
+        flags: []
+        enchants: {}
+        data: null
+      '>':
+        material: BOOK
+        amount: 1
+        durability: 0
+        unbreakable: false
+        name: Next page
+        lore: []
+        flags: []
+        enchants: {}
+        data: null
+  categoryPattern: null
+  inventoryName: Craft inventory name
+  masteryUnlock: 0
+  masteryFee: 0
+  fillItem:
+    material: BLACK_STAINED_GLASS_PANE
+    amount: 1
+    durability: 0
+    unbreakable: false
+    name: ''
+    lore: []
+    flags: []
+    enchants: {}
+    data: null
+  useCategories: true
+  recipes: []

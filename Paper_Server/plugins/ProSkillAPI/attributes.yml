@@ -1,0 +1,819 @@
+# Attributes.yml
+
+# For full details, visit
+# http://dev.bukkit.org/bukkit-plugins/skillapi/pages/attributes/
+
+# List of available stats to modify:
+#   armor            | [PREM, 1.9+] Vanilla damage mitigation
+#   armor-toughness  | [PREM, 1.9+] Secondary vanilla damage mitigation
+#   attack-speed	 | [PREM, 1.9+] Weapon recharge time
+#   cooldown         | [PREM] Modifies skill cooldowns
+#   defense-<type>   | [PREM] Reduces damage taken from various damage sources.
+#                    |     See the DamageCause docs to see supported types.
+#                    |     Use lower-case versions of it, such as "defense-block_explosion".
+#   exp              | [PREM] increases all class experience gained
+#   health           | The max health of the player
+#   hunger           | [PREM] Increases how long hunger lasts. This attribute is always based off of a base value of 1. A resulting value of 2 would double how long the hunger bar lasts, for example.
+#   hunger-heal      | [PREM] Increases how much you heal while satiated
+#   knockback-resist | [PREM, 1.9+] Probability of resisting knockback as a decimal (1.0 is 100% change to resist)
+#   luck	         | [PREM, 1.9+] loot table chances
+#   mana	         | The max mana of the player
+#   mana-regen       | The amount of mana regeneration the player has
+#   move-speed       | The movement speed of the player
+#   physical-damage  | The amount of damage done by physical (basic or projectile) attacks
+#   physical-defense | The amount of damage taken by physical (basic or projectile) attacks
+#   skill-damage	 | The amount of damage done by skills
+#   skill-defense    | The amount of damage taken by skills
+#   skill-damage-<classification>  | [PREM] The amount of damage done by skills with the specified classification
+#   skill-defense-<classification> | [PREM] The amount of damage taken by skills with the specified classification
+# iomatix proposes
+# cost_base - initial cost of an attr upgrade
+# cost_modifier - incremental value increasing cost_base for each of the attr upgrade
+# New placeholders for icon-lores:
+# {amount} - the stage value for invested points.
+# {total} - the stage value for invested points and class modifiers.
+# {max} - max stage value player can invest the attr points.
+# {cost} - cost in attr points for an upgrade to the next stage.
+# {invested} - total spent attr points for the attr.
+# {ap} - current value of attr points.
+
+######## MAIN ATTRIBUTES ########
+strength: 
+  display: 'Strength'
+  max: '999'
+  cost_base: '1'
+  cost_modifier: '0.0'
+  icon: 'potato'
+  'icon-data': '14'
+  'icon-lore': 
+  - '&6Strength &7(&2{amount}&7)'
+  - ''
+  - '&7Grants 1.0% increased'
+  - '&7melee damage & armor per'
+  - '&7point invested.'
+  global: 
+    condition: {}
+    mechanic:
+      'Damage-value': 'a+v:icon-key=melee_damage_value'
+    target: {}
+  stats: 
+    'armor': 'a*0.01+1*v'
+dexterity: 
+  display: 'Dexterity'
+  max: '999'
+  cost_base: '1'
+  cost_modifier: '0.0'
+  icon: 'lily_pad'
+  'icon-data': '10'
+  'icon-lore': 
+  - '&6Dexterity &7(&2{amount}&7)'
+  - ''
+  - '&7Grants 1.0% increased'
+  - '&7projectile damage &' 
+  - '&7attack speed per'
+  - '&7point invested.'
+  global: 
+    condition: {}
+    mechanic:
+      'Damage-value': 'a+v:icon-key=projectile_damage_value'
+    target: {}
+  stats:
+    'attack-speed': 'a*0.01+1*v'
+intelligence: 
+  display: 'Intelligence'
+  max: '999'
+  cost_base: '1'
+  cost_modifier: '0.0'
+  icon: 'book'
+  'icon-data': '5'
+  'icon-lore': 
+  - '&6Intelligence &7(&2{amount}&7)'
+  - ''
+  - '&7Grants 1% increased'
+  - '&7skill damage per point'
+  - '&7invested.'
+  global: 
+    condition: {}
+    mechanic:
+      'Damage-value': 'a+v:icon-key=trap_damage_value'
+    target: {}
+  stats:
+    'mana-regen': 'a+v'
+vitality: 
+  display: 'redstone'
+  max: '999'
+  cost_base: '1'
+  cost_modifier: '0.0'
+  icon: 'ink sack'
+  'icon-data': '1'
+  'icon-lore': 
+  - '&6Vitality &7(&2{amount}&7)'
+  - ''
+  - '&7Grants 1% health &'
+  - '&7armor toughness per'
+  - '&7point invested.'
+  global: 
+    condition: {}
+    mechanic:
+      'Damage-value': 'a+v:icon-key=bomb_damage_value'
+    target: {}
+  stats: 
+    health: '(a*0.01)+v'
+spirit: 
+  display: 'Spirit'
+  max: '999'
+  cost_base: '1'
+  cost_modifier: '0.0'
+  icon: 'glass'
+  'icon-data': '6'
+  'icon-lore': 
+  - '&6Spirit &7(&2{amount}&7)'
+  - ''
+  - '&7Grants 1 mana & 1% resistance'
+  - '&7mana regeneration per'
+  - '&7point invested.'
+  global: 
+    condition: {}
+    mechanic:
+      'Damage-value': 'a+v:icon-key=skill_damage_value'
+    target: {}
+  stats: 
+    'mana': 'a+v'
+
+######## PLAYER ########
+player_base_damage_mod:
+  display: 'player_base_damage_mod'
+  max: '999'
+  cost_base: '1'
+  cost_modifier: '0.0'
+  icon: 'player_head'
+  'icon-data': '5'
+  'icon-lore':
+  - '&player_percent_damage_mod &7(&2{amount}&7)'
+  global:
+    condition: {}
+    mechanic:
+      'Damage-value': 'a+1*v'
+    target: {}
+player_percent_damage_mod:
+  display: 'player_percent_damage_mod'
+  max: '999'
+  cost_base: '1'
+  cost_modifier: '0.0'
+  icon: 'player_head'
+  'icon-data': '5'
+  'icon-lore':
+  - '&player_percent_damage_mod &7(&2{amount}&7)'
+  global:
+    condition: {}
+    mechanic:
+      'Damage-value': 'a*0.01+1*v'
+    target: {}
+player_move_speed_mod: 
+  display: 'player_move_speed_mod'
+  max: '999'
+  cost_base: '1'
+  cost_modifier: '0.0'
+  icon: 'player_head'
+  'icon-data': '6'
+  'icon-lore': 
+  - '&6Spirit &7(&2{amount}&7)'
+  - ''
+  - '&7Increase Player'
+  - '&7Movement Speed'
+  global: 
+    condition: {}
+    mechanic: {}
+    target: {}
+  stats: 
+    'move-speed': 'a*0.01+1*v'
+player_percent_health_mod: 
+  display: 'player_percent_health_mod'
+  max: '999'
+  cost_base: '1'
+  cost_modifier: '0.0'
+  icon: 'player_head'
+  'icon-data': '6'
+  'icon-lore': 
+  - '&6Spirit &7(&2{amount}&7)'
+  - ''
+  - '&7Increase Player'
+  - '&7Movement Speed'
+  global: 
+    condition: {}
+    mechanic: {}
+    target: {}
+  stats: 
+    'health': 'a*0.01+1*v'
+player_base_health_mod: 
+  display: 'player_base_health_mod'
+  max: '999'
+  cost_base: '1'
+  cost_modifier: '0.0'
+  icon: 'player_head'
+  'icon-data': '6'
+  'icon-lore': 
+  - '&6Spirit &7(&2{amount}&7)'
+  - ''
+  - '&7Increase Player'
+  - '&7Movement Speed'
+  global: 
+    condition: {}
+    mechanic: {}
+    target: {}
+  stats: 
+    'health': 'a+1*v'
+player_armor_mod:
+  display: 'player_armor_mod'
+  max: '999'
+  cost_base: '1'
+  cost_modifier: '0.0'
+  icon: 'player_head'
+  'icon-data': '10'
+  'icon-lore':
+  - '&player_percent_range_mod &7(&2{amount}&7)'
+  global:
+    condition: {}
+    mechanic: {}
+    target: {}
+  stats: 
+    'armor': 'a+1*v'
+player_armortoughness_mod:
+  display: 'player_armortoughness_mod'
+  max: '999'
+  cost_base: '1'
+  cost_modifier: '0.0'
+  icon: 'player_head'
+  'icon-data': '10'
+  'icon-lore':
+  - '&player_percent_range_mod &7(&2{amount}&7)'
+  global:
+    condition: {}
+    mechanic: {}
+    target: {}
+  stats: 
+    'armor-toughness': 'a+1*v'
+player_cooldown_mod:
+  display: 'player_cooldown_mod'
+  max: '999'
+  cost_base: '1'
+  cost_modifier: '0.0'
+  icon: 'player_head'
+  'icon-data': '10'
+  'icon-lore':
+  - '&player_percent_range_mod &7(&2{amount}&7)'
+  global:
+    condition: {}
+    mechanic:
+      'Cooldown-value': 'a*0.01+1*v'
+    target: {}
+player_attack_speed_mod:
+  display: 'player_attack_speed_mod'
+  max: '999'
+  cost_base: '1'
+  cost_modifier: '0.0'
+  icon: 'player_head'
+  'icon-data': '10'
+  'icon-lore':
+  - '&player_percent_range_mod &7(&2{amount}&7)'
+  global:
+    condition: {}
+    mechanic: {}
+    target: {}
+  stats: 
+    'attack-speed': 'a*0.01+1*v'
+player_skill_percent_dmg_mod:
+  display: 'player_skill_percent_dmg_mod'
+  max: '999'
+  cost_base: '1'
+  cost_modifier: '0.0'
+  icon: 'player_head'
+  'icon-data': '10'
+  'icon-lore':
+  - '&player_percent_range_mod &7(&2{amount}&7)'
+  global:
+    condition: {}
+    mechanic: {}
+    target: {}
+  stats: 
+    'skill-damage': 'a*0.01+1*v'
+player_skill_base_dmg_mod:
+  display: 'player_skill_base_dmg_mod'
+  max: '999'
+  cost_base: '1'
+  cost_modifier: '0.0'
+  icon: 'player_head'
+  'icon-data': '10'
+  'icon-lore':
+  - '&player_percent_range_mod &7(&2{amount}&7)'
+  global:
+    condition: {}
+    mechanic: {}
+    target: {}
+  stats: 
+    'skill-damage': 'a+1*v'
+player_skill_base_dmg_mod:
+  display: 'player_skill_base_dmg_mod'
+  max: '999'
+  cost_base: '1'
+  cost_modifier: '0.0'
+  icon: 'player_head'
+  'icon-data': '10'
+  'icon-lore':
+  - '&player_percent_range_mod &7(&2{amount}&7)'
+  global:
+    condition: {}
+    mechanic: {}
+    target: {}
+  stats: 
+    'skill-damage': 'a+1*v'
+player_physical_percent_dmg_mod:
+  display: 'player_physical_percent_dmg_mod'
+  max: '999'
+  cost_base: '1'
+  cost_modifier: '0.0'
+  icon: 'player_head'
+  'icon-data': '10'
+  'icon-lore':
+  - '&player_percent_range_mod &7(&2{amount}&7)'
+  global:
+    condition: {}
+    mechanic: {}
+    target: {}
+  stats: 
+    'physical-damage': 'a*0.01+1*v'
+player_physical_base_dmg_mod:
+  display: 'player_physical_base_dmg_mod'
+  max: '999'
+  cost_base: '1'
+  cost_modifier: '0.0'
+  icon: 'player_head'
+  'icon-data': '10'
+  'icon-lore':
+  - '&player_percent_range_mod &7(&2{amount}&7)'
+  global:
+    condition: {}
+    mechanic: {}
+    target: {}
+  stats: 
+    'physical-damage': 'a+1*v'
+player_mana_regen_mod:
+  display: 'player_mana_regen_mod'
+  max: '999'
+  cost_base: '1'
+  cost_modifier: '0.0'
+  icon: 'player_head'
+  'icon-data': '10'
+  'icon-lore':
+  - '&player_percent_range_mod &7(&2{amount}&7)'
+  global:
+    condition: {}
+    mechanic: {}
+    target: {}
+  stats: 
+    'mana-regen': 'a+1*v'
+player_mana_mod:
+  display: 'player_mana_mod'
+  max: '999'
+  cost_base: '1'
+  cost_modifier: '0.0'
+  icon: 'player_head'
+  'icon-data': '10'
+  'icon-lore':
+  - '&player_percent_range_mod &7(&2{amount}&7)'
+  global:
+    condition: {}
+    mechanic: {}
+    target: {}
+  stats: 
+    'mana': 'a+1*v'
+player_hunger_mod:
+  display: 'player_hunger_mod'
+  max: '999'
+  cost_base: '1'
+  cost_modifier: '0.0'
+  icon: 'player_head'
+  'icon-data': '10'
+  'icon-lore':
+  - '&player_percent_range_mod &7(&2{amount}&7)'
+  global:
+    condition: {}
+    mechanic: {}
+    target: {}
+  stats: 
+    'hunger': 'a+1*v'
+player_hunger_heal_mod:
+  display: 'player_hunger_heal_mod'
+  max: '999'
+  cost_base: '1'
+  cost_modifier: '0.0'
+  icon: 'player_head'
+  'icon-data': '10'
+  'icon-lore':
+  - '&player_percent_range_mod &7(&2{amount}&7)'
+  global:
+    condition: {}
+    mechanic: {}
+    target: {}
+  stats: 
+    'hunger-heal': 'a+1*v'
+player_percent_aoe_mod:
+  display: 'player_percent_aoe_mod'
+  max: '999'
+  cost_base: '1'
+  cost_modifier: '0.0'
+  icon: 'player_head'
+  'icon-data': '10'
+  'icon-lore':
+  - '&player_percent_range_mod &7(&2{amount}&7)'
+  global:
+    condition: {}
+    mechanic: {}
+    target:
+      'Area-radius': 'a*0.01+1*v'
+player_percent_range_mod:
+  display: 'player_percent_range_mod'
+  max: '999'
+  cost_base: '1'
+  cost_modifier: '0.0'
+  icon: 'player_head'
+  'icon-data': '10'
+  'icon-lore':
+  - '&player_percent_range_mod &7(&2{amount}&7)'
+  global:
+    condition: {}
+    mechanic: {}
+    target:
+      'Cone-range': 'a*0.01+1*v'
+      'Linear-range': 'a*0.01+1*v'
+      'Location-range': 'a*0.01+1*v'
+      'Nearest-radius': 'a*0.01+1*v'
+      'Single-range': 'a*0.01+1*v'
+
+##### PROJECTILE #####
+projectile_base_damage_mod:
+  display: 'projectile_base_damage_mod'
+  max: '999'
+  cost_base: '1'
+  cost_modifier: '0.0'
+  icon: 'arrow'
+  'icon-data': '5'
+  'icon-lore':
+  - '&player_percent_damage_mod &7(&2{amount}&7)'
+  global:
+    condition: {}
+    mechanic:
+      'Damage-value': 'a+v:icon-key=projectile_damage_value'
+    target: {}
+projectile_percent_damage_mod:
+  display: 'projectile_percent_damage_mod'
+  max: '999'
+  cost_base: '1'
+  cost_modifier: '0.0'
+  icon: 'arrow'
+  'icon-data': '5'
+  'icon-lore':
+  - '&player_percent_damage_mod &7(&2{amount}&7)'
+  global:
+    condition: {}
+    mechanic:
+      'Damage-value': 'a+v:icon-key=projectile_damage_value'
+    target: {}
+projectile_cooldown_mod:
+  display: 'projectile_cooldown_mod'
+  max: '999'
+  cost_base: '1'
+  cost_modifier: '0.0'
+  icon: 'arrow'
+  'icon-data': '5'
+  'icon-lore':
+  - '&player_percent_cooldown_mod &7(&2{amount}&7)'
+  global:
+    condition: {}
+    mechanic:
+      'Cooldown-value': 'a+v:icon-key=projectile_cooldown_value'
+    target: {}
+projectile_quantity_mod:
+  display: 'projectile_quantity_mod'
+  max: '999'
+  cost_base: '1'
+  cost_modifier: '0.0'
+  icon: 'arrow'
+  'icon-data': '5'
+  'icon-lore':
+  - '&player_percent_cooldown_mod &7(&2{amount}&7)'
+  global:
+    condition: {}
+    mechanic:
+      'Projectile-amount': 'a+v:icon-key=projectile_stat'
+    target: {}
+projectile_percent_aoe_mod:
+  display: 'projectile_percent_aoe_mod'
+  max: '999'
+  cost_base: '1'
+  cost_modifier: '0.0'
+  icon: 'arrow'
+  'icon-data': '10'
+  'icon-lore':
+  - '&player_percent_range_mod &7(&2{amount}&7)'
+  global:
+    condition: {}
+    mechanic: {}
+    target:
+      'Area-radius': 'a*0.01+1*v:icon-key=projectile_aoe_value'
+projectile_percent_range_mod:
+  display: 'projectile_percent_range_mod'
+  max: '999'
+  cost_base: '1'
+  cost_modifier: '0.0'
+  icon: 'arrow'
+  'icon-data': '10'
+  'icon-lore':
+  - '&player_percent_range_mod &7(&2{amount}&7)'
+  global:
+    condition: {}
+    mechanic: {}
+    target:
+      'Cone-range': 'a*0.01+1*v:icon-key=projectile_range_value'
+      'Linear-range': 'a*0.01+1*v:icon-key=projectile_range_value'
+      'Location-range': 'a*0.01+1*v:icon-key=projectile_range_value'
+      'Nearest-radius': 'a*0.01+1*v:icon-key=projectile_range_value'
+      'Single-range': 'a*0.01+1*v:icon-key=projectile_range_value'
+######## TRAP ########
+trap_base_damage_mod:
+  display: 'trap_base_damage_mod'
+  max: '999'
+  cost_base: '1'
+  cost_modifier: '0.0'
+  icon: 'tripwire_hook'
+  'icon-data': '5'
+  'icon-lore':
+  - '&player_percent_damage_mod &7(&2{amount}&7)'
+  global:
+    condition: {}
+    mechanic:
+      'Damage-value': 'a+v:icon-key=trap_damage_value'
+    target: {}
+trap_percent_damage_mod:
+  display: 'trap_percent_damage_mod'
+  max: '999'
+  cost_base: '1'
+  cost_modifier: '0.0'
+  icon: 'tripwire_hook'
+  'icon-data': '5'
+  'icon-lore':
+  - '&player_percent_damage_mod &7(&2{amount}&7)'
+  global:
+    condition: {}
+    mechanic:
+      'Damage-value': 'a+v:icon-key=trap_damage_value'
+    target: {}
+trap_cooldown_mod:
+  display: 'trap_cooldown_mod'
+  max: '999'
+  cost_base: '1'
+  cost_modifier: '0.0'
+  icon: 'tripwire_hook'
+  'icon-data': '5'
+  'icon-lore':
+  - '&player_percent_cooldown_mod &7(&2{amount}&7)'
+  global:
+    condition: {}
+    mechanic:
+      'Cooldown-value': 'a+v:icon-key=trap_cooldown_value'
+    target: {}
+trap_percent_aoe_mod:
+  display: 'trap_percent_aoe_mod'
+  max: '999'
+  cost_base: '1'
+  cost_modifier: '0.0'
+  icon: 'tripwire_hook'
+  'icon-data': '10'
+  'icon-lore':
+  - '&player_percent_range_mod &7(&2{amount}&7)'
+  global:
+    condition: {}
+    mechanic: {}
+    target:
+      'Area-radius': 'a*0.01+1*v:icon-key=trap_aoe_value'
+##### Bomb #####
+bomb_base_damage_mod:
+  display: 'bomb_base_damage_mod'
+  max: '999'
+  cost_base: '1'
+  cost_modifier: '0.0'
+  icon: 'fire_charge'
+  'icon-data': '5'
+  'icon-lore':
+  - '&player_percent_damage_mod &7(&2{amount}&7)'
+  global:
+    condition: {}
+    mechanic:
+      'Damage-value': 'a+v:icon-key=bomb_damage_value'
+    target: {}
+bomb_percent_damage_mod:
+  display: 'bomb_percent_damage_mod'
+  max: '999'
+  cost_base: '1'
+  cost_modifier: '0.0'
+  icon: 'fire_charge'
+  'icon-data': '5'
+  'icon-lore':
+  - '&player_percent_damage_mod &7(&2{amount}&7)'
+  global:
+    condition: {}
+    mechanic:
+      'Damage-value': 'a+v:icon-key=bomb_damage_value'
+    target: {}
+bomb_cooldown_mod:
+  display: 'bomb_cooldown_mod'
+  max: '999'
+  cost_base: '1'
+  cost_modifier: '0.0'
+  icon: 'fire_charge'
+  'icon-data': '5'
+  'icon-lore':
+  - '&player_percent_cooldown_mod &7(&2{amount}&7)'
+  global:
+    condition: {}
+    mechanic:
+      'Cooldown-value': 'a+v:icon-key=bomb_cooldown_value'
+    target: {}
+bomb_quantity_mod:
+  display: 'bomb_quantity_mod'
+  max: '999'
+  cost_base: '1'
+  cost_modifier: '0.0'
+  icon: 'fire_charge'
+  'icon-data': '5'
+  'icon-lore':
+  - '&player_percent_cooldown_mod &7(&2{amount}&7)'
+  global:
+    condition: {}
+    mechanic:
+      'Projectile-amount': 'a+v:icon-key=bomb_stat'
+      'Particle Projectile-amount': 'a+v:icon-key=bomb_stat'
+    target: {}
+bomb_percent_aoe_mod:
+  display: 'bomb_percent_aoe_mod'
+  max: '999'
+  cost_base: '1'
+  cost_modifier: '0.0'
+  icon: 'fire_charge'
+  'icon-data': '10'
+  'icon-lore':
+  - '&player_percent_range_mod &7(&2{amount}&7)'
+  global:
+    condition: {}
+    mechanic:
+      'Particle Animation-radius': 'a*0.01+1*v:icon-key=bomb_particle'
+      'Particle Animation-points': 'a*0.01+1*v:icon-key=bomb_particle'
+    target:
+      'Area-radius': 'a*0.01+1*v:icon-key=bomb_aoe_value'
+bomb_percent_range_mod:
+  display: 'bomb_percent_range_mod'
+  max: '999'
+  cost_base: '1'
+  cost_modifier: '0.0'
+  icon: 'fire_charge'
+  'icon-data': '10'
+  'icon-lore':
+  - '&player_percent_range_mod &7(&2{amount}&7)'
+  global:
+    condition: {}
+    mechanic:
+      'Projectile-velocity': 'a*0.01+1*v:icon-key=bomb_stat'
+      'Projectile-lifespan': 'a*0.01+1*v:icon-key=bomb_stat'
+      'Potion Projectile-velocity': 'a*0.01+1*v:icon-key=bomb_stat'
+      'Potion Projectile-lifespan': 'a*0.01+1*v:icon-key=bomb_stat'
+    target: {}
+######## POISON ########
+poison_base_damage_mod:
+  display: 'poison_base_damage_mod'
+  max: '999'
+  cost_base: '1'
+  cost_modifier: '0.0'
+  icon: 'scute'
+  'icon-data': '5'
+  'icon-lore':
+  - '&player_percent_damage_mod &7(&2{amount}&7)'
+  global:
+    condition: {}
+    mechanic:
+      'Damage-value': 'a+v:icon-key=poison_damage_value'
+    target: {}
+poison_percent_damage_mod:
+  display: 'poison_percent_damage_mod'
+  max: '999'
+  cost_base: '1'
+  cost_modifier: '0.0'
+  icon: 'scute'
+  'icon-data': '5'
+  'icon-lore':
+  - '&player_percent_damage_mod &7(&2{amount}&7)'
+  global:
+    condition: {}
+    mechanic:
+      'Damage-value': 'a+v:icon-key=poison_damage_value'
+    target: {}
+poison_cooldown_mod:
+  display: 'poison_cooldown_mod'
+  max: '999'
+  cost_base: '1'
+  cost_modifier: '0.0'
+  icon: 'scute'
+  'icon-data': '5'
+  'icon-lore':
+  - '&player_percent_cooldown_mod &7(&2{amount}&7)'
+  global:
+    condition: {}
+    mechanic:
+      'Cooldown-value': 'a+v:icon-key=poison_cooldown_value'
+    target: {}
+poison_duration_mod:
+  display: 'poison_percent_aoe_mod'
+  max: '999'
+  cost_base: '1'
+  cost_modifier: '0.0'
+  icon: 'scute'
+  'icon-data': '10'
+  'icon-lore':
+  - '&player_percent_range_mod &7(&2{amount}&7)'
+  global:
+    condition: {}
+    mechanic: {}
+    target:
+      'Potion-seconds': 'a*0.01+1*v:icon-key=poison_duration_value'
+poison_tier_mod:
+  display: 'poison_percent_aoe_mod'
+  max: '999'
+  cost_base: '1'
+  cost_modifier: '0.0'
+  icon: 'scute'
+  'icon-data': '10'
+  'icon-lore':
+  - '&player_percent_range_mod &7(&2{amount}&7)'
+  global:
+    condition: {}
+    mechanic: {}
+    target:
+      'Potion-tier': 'a+1*v:icon-key=poison_tier_value'
+######## Explosive ########
+explosive_base_damage_mod:
+  display: 'explosive_base_damage_mod'
+  max: '999'
+  cost_base: '1'
+  cost_modifier: '0.0'
+  icon: 'tnt'
+  'icon-data': '5'
+  'icon-lore':
+  - '&player_percent_damage_mod &7(&2{amount}&7)'
+  global:
+    condition: {}
+    mechanic:
+      'Damage-value': 'a+v:icon-key=explosive_damage_value'
+    target: {}
+explosive_percent_damage_mod:
+  display: 'explosive_percent_damage_mod'
+  max: '999'
+  cost_base: '1'
+  cost_modifier: '0.0'
+  icon: 'tnt'
+  'icon-data': '5'
+  'icon-lore':
+  - '&player_percent_damage_mod &7(&2{amount}&7)'
+  global:
+    condition: {}
+    mechanic:
+      'Damage-value': 'a+v:icon-key=explosive_damage_value'
+    target: {}
+explosive_cooldown_mod:
+  display: 'Explosive Cooldown'
+  max: '999'
+  cost_base: '1'
+  cost_modifier: '0.0'
+  icon: 'tnt'
+  'icon-data': '5'
+  'icon-lore':
+  - '&player_percent_cooldown_mod &7(&2{amount}&7)'
+  global:
+    condition: {}
+    mechanic:
+      'Cooldown-value': 'a+v:icon-key=explosive_cooldown_value'
+    target: {}
+explosive_aoe_mod:
+  display: 'Explosive AOE'
+  max: '999'
+  cost_base: '1'
+  cost_modifier: '0.0'
+  icon: 'tnt'
+  'icon-data': '10'
+  'icon-lore':
+  - '&player_percent_range_mod &7(&2{amount}&7)'
+  global:
+    condition: {}
+    mechanic:
+      'Particle-radius': 'a*0.01+1*v:icon-key=explosive_particle'
+      'Particle-points': 'a*0.01+1*v:icon-key=explosive_particle'
+    target:
+      'Area-radius': 'a*0.01+1*v:icon-key=explosive_aoe_value'

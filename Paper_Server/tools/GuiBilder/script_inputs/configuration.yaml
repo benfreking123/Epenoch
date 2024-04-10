@@ -1,0 +1,70 @@
+slots:
+  '1_2':
+    icon: attr_rd.png
+    name: ''
+    placeholders:
+      player_attribute_dexterity_mod: '10'
+      player_attribute_intelligence_mod: '10'
+      player_attribute_luck_mod: '10'
+      player_attribute_spirit_mod: '10'
+      player_attribute_strength_mod: '10'
+      player_attribute_vitality_mod: '10'
+    requirements:
+    - node_1
+    selections:
+    - player_attribute_dexterity_mod
+    - player_attribute_strength_mod
+    - player_attribute_vitality_mod
+    - player_attribute_intelligence_mod
+    - player_attribute_spirit_mod
+    - player_attribute_luck_mod
+    type: attr
+  '2_0':
+    icon: attr_lr.png
+    name: attr_1
+    placeholders:
+      player_attribute_vitality_mod: '10'
+    requirements: []
+    selections:
+    - player_attribute_vitality_mod
+    type: attr
+  '2_1':
+    icon: attr_lr.png
+    name: attr_2
+    placeholders:
+      player_attribute_strength_mod: '10'
+      player_attribute_vitality_mod: '10'
+    requirements:
+    - attr_1
+    selections:
+    - player_attribute_strength_mod
+    - player_attribute_vitality_mod
+    type: attr
+  '2_2':
+    icon: node_ltd.png
+    name: node_1
+    placeholders:
+      poison_base _dmg_mod: '10'
+      poison_duration_mod: '10'
+      poison_percent_cooldown_mod: '10'
+      poison_percent_dmg_mod: '10'
+    requirements:
+    - attr_2
+    selections:
+    - poison_percent_dmg_mod
+    - poison_base _dmg_mod
+    - poison_duration_mod
+    - poison_percent_cooldown_mod
+    type: node
+  '2_3':
+    icon: default_icon.png
+    name: ''
+    requirements: []
+    type: ''
+  '3_2':
+    details: test_skill
+    icon: skill_corner.png
+    name: Skill_1
+    requirements:
+    - node_1
+    type: skill

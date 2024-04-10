@@ -1,0 +1,69 @@
+pt: 
+  name: 'pt'
+  sender: 'ANYONE'
+  enabled: 'true'
+  cooldown: 0
+accept: 
+  name: 'accept'
+  description: 'Accepts a party request'
+  permission: 'party.general'
+  args: ''
+  sender: 'PLAYER_ONLY'
+  enabled: 'true'
+  cooldown: 0
+decline: 
+  name: 'decline'
+  description: 'Declines a party request'
+  permission: 'party.general'
+  args: ''
+  sender: 'PLAYER_ONLY'
+  enabled: 'true'
+  cooldown: 0
+info: 
+  name: 'info'
+  description: 'Views party information'
+  permission: 'party.general'
+  args: ''
+  sender: 'PLAYER_ONLY'
+  enabled: 'true'
+  cooldown: 0
+invite: 
+  name: 'invite'
+  description: 'Invites a player to a party'
+  permission: 'party.general'
+  args: '<player>'
+  sender: 'PLAYER_ONLY'
+  enabled: 'true'
+  cooldown: 0
+leave: 
+  name: 'leave'
+  description: 'Leaves your party'
+  permission: 'party.general'
+  args: ''
+  sender: 'PLAYER_ONLY'
+  enabled: 'true'
+  cooldown: 0
+message: 
+  name: 'message'
+  description: 'Sends a message to your party'
+  permission: 'party.general'
+  args: '<message>'
+  sender: 'PLAYER_ONLY'
+  enabled: 'true'
+  cooldown: 0
+toggle: 
+  name: 'toggle'
+  description: 'Toggles party chat on/off'
+  permission: 'party.general'
+  args: ''
+  sender: 'PLAYER_ONLY'
+  enabled: 'true'
+  cooldown: 0
+reload: 
+  name: 'reload'
+  description: "Reloads the plugin's config.yml and language.yml"
+  permission: 'party.reload'
+  args: ''
+  sender: 'ANYONE'
+  enabled: 'true'
+  cooldown: 0

@@ -1,0 +1,113 @@
+ATTRIBUTES: 
+  rows: 6
+  pages: 3
+  slots: 
+    1: {}
+    2: 
+      trap_cooldown_mod: 11
+      bomb_percent_aoe_mod: 21
+      bomb_quantity_mod: 22
+      bomb_percent_range_mod: 23
+      bomb_cooldown_mod: 20
+      projectile_percent_damage_mod: 1
+      projectile_percent_aoe_mod: 4
+      trap_base_damage_mod: 9
+      bomb_base_damage_mod: 18
+      trap_percent_damage_mod: 10
+      projectile_percent_range_mod: 3
+      trap_percent_aoe_mod: 12
+      projectile_cooldown_mod: 2
+      projectile_base_damage_mod: 0
+      projectile_quantity_mod: 5
+      bomb_percent_damage_mod: 19
+    3: 
+      poison_cooldown_mod: 2
+      explosive_base_damage_mod: 9
+      poison_base_damage_mod: 0
+      poison_percent_damage_mod: 1
+      poison_tier_mod: 4
+      explosive_aoe_mod: 12
+      poison_duration_mod: 3
+      explosive_cooldown_mod: 11
+      explosive_percent_damage_mod: 10
+stNinja: 
+  rows: 2
+  pages: 1
+  slots: 
+    1: 
+      clear: 0
+      'smoke bomb': 9
+stbase_class: 
+  rows: 2
+  pages: 2
+  slots: 
+    1: 
+      'explosive bomb': 0
+      'fire skill burst': 9
+    2: 
+      'scatter bolt': 9
+      'poison burst': 0
+stMage: 
+  rows: 6
+  pages: 1
+  slots: 
+    1: 
+      lightning: 27
+      clear: 1
+      roll: 18
+      'group heal': 10
+      'smoke bomb': 19
+      fireball: 0
+      'poison damage': 9
+CLASS_DETAILS: 
+  rows: 3
+  pages: 1
+  slots: 
+    1: 
+      class: 0
+stWarrior: 
+  rows: 5
+  pages: 1
+  slots: 
+    1: 
+      lightning: 36
+      clear: 1
+      roll: 10
+      'group heal': 9
+      'sword buffs': 27
+      'smoke bomb': 18
+      fireball: 0
+      'summon throwing dagger': 19
+      'blood slash': 28
+csNinja: 
+  rows: 3
+  pages: 1
+  slots: 
+    1: 
+      hunter: 4
+stHunter: 
+  rows: 6
+  pages: 1
+  slots: 
+    1: 
+      roll: 0
+      'sword buffs': 27
+      'smoke bomb': 9
+      'summon throwing dagger': 18
+CLASS_SELECTION: 
+  rows: 3
+  pages: 1
+  slots: 
+    1: 
+      mage: 12
+      ninja: 13
+stMarksman: 
+  rows: 6
+  pages: 1
+  slots: 
+    1: 
+      'pep talk': 36
+      clear: 9
+      'smoke bomb': 18
+      fireball: 0
+      'summon throwing dagger': 27

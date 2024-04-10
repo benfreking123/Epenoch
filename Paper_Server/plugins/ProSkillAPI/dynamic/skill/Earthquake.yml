@@ -1,0 +1,136 @@
+Earthquake: 
+  name: 'Earthquake'
+  type: 'Dynamic'
+  'max-level': 5
+  'skill-req-lvl': 0
+  'needs-permission': 'false'
+  'cooldown-message': 'true'
+  attributes: 
+    'level-base': '1'
+    'level-scale': '0'
+    'cost-base': '1'
+    'cost-scale': '0'
+    'cooldown-base': '10'
+    'cooldown-scale': '0'
+    'mana-base': '0'
+    'mana-scale': '0'
+    'points-spent-req-base': '0'
+    'points-spent-req-scale': '0'
+    incompatible: []
+  msg: '&6{player} &2has cast &6{skill}'
+  icon: 'PUMPKIN'
+  'icon-data': 0
+  'icon-durability': 0
+  'icon-lore': 
+  - '&d{name} &7({level}/{max})'
+  - '&2Type: &6{type}'
+  - ''
+  - '{req:level}Level: {attr:level}'
+  - '{req:cost}Cost: {attr:cost}'
+  - ''
+  - '&2Mana: {attr:mana}'
+  - '&2Cooldown: {attr:cooldown}'
+  desc: []
+  components: 
+    Crouch: 
+      type: 'trigger'
+      data: 
+        mana: 'false'
+        cooldown: 'false'
+        type: 'Start Crouching'
+      preview: 
+        enabled: 'false'
+      children: 
+        Repeat: 
+          type: 'mechanic'
+          data: 
+            'icon-key': ''
+            counts: 'true'
+            'repetitions-base': '20'
+            'repetitions-scale': '0'
+            period: '0.25'
+            delay: '0'
+            'stop-on-fail': 'false'
+          preview: 
+            enabled: 'false'
+          children: 
+            Area: 
+              type: 'target'
+              data: 
+                'icon-key': ''
+                'radius-base': '5'
+                'radius-scale': '0'
+                group: 'Enemy'
+                wall: 'false'
+                invulnerable: 'false'
+                caster: 'False'
+                'max-base': '99'
+                'max-scale': '0'
+                random: 'false'
+              preview: 
+                enabled: 'false'
+                'per-target': 'false'
+                circle: 'false'
+                sphere: 'false'
+              children: 
+                Ground: 
+                  type: 'condition'
+                  data: 
+                    'icon-key': ''
+                    type: 'On Ground'
+                  preview: 
+                    enabled: 'false'
+                  children: 
+                    Damage: 
+                      type: 'mechanic'
+                      data: 
+                        'icon-key': ''
+                        counts: 'true'
+                        type: 'Damage'
+                        'value-base': '3'
+                        'value-scale': '1'
+                        true: 'false'
+                        classifier: 'default'
+                        knockback: 'false'
+                        cause: 'Custom'
+                      preview: 
+                        enabled: 'false'
+                      children: {}
+            'Particle Animation': 
+              type: 'mechanic'
+              data: 
+                'icon-key': ''
+                counts: 'true'
+                steps: '1'
+                frequency: '0.05'
+                angle: '0'
+                start: '0'
+                'duration-base': '0.05'
+                'duration-scale': '0'
+                'h-translation-base': '0'
+                'h-translation-scale': '0'
+                'v-translation-base': '0'
+                'v-translation-scale': '0'
+                'h-cycles': '1'
+                'v-cycles': '1'
+                particle: 'Block dust'
+                material: 'Oak planks'
+                arrangement: 'Circle'
+                direction: 'XZ'
+                'radius-base': '5'
+                'radius-scale': '0'
+                'particles-base': '25'
+                'particles-scale': '0'
+                'visible-radius': '25'
+                dx: '0'
+                dy: '0'
+                dz: '0'
+                amount: '1'
+                speed: '0.1'
+                forward: '0'
+                upward: '0'
+                right: '0'
+                '-with-rotation': 'false'
+              preview: 
+                enabled: 'false'
+              children: {}

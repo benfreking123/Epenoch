@@ -1,0 +1,64 @@
+Warrior: 
+  name: 'Warrior'
+  'action-bar': ''
+  prefix: '&6Hardened Vet'
+  group: 'class'
+  mana: '&2Mana'
+  'max-level': 120
+  parent: 'Hunter'
+  'needs-permission': 'false'
+  attributes: 
+    'health-base': '50'
+    'health-scale': '5'
+    'mana-base': '35'
+    'mana-scale': '3'
+    'vitality-base': '10'
+    'vitality-scale': '2'
+    'spirit-base': '5'
+    'spirit-scale': '4'
+    'intelligence-base': '8'
+    'intelligence-scale': '3'
+    'dexterity-base': '6'
+    'dexterity-scale': '2'
+    'strength-base': '9'
+    'strength-scale': '3'
+  'mana-regen': 4.0
+  'skill-tree': 'REQUIREMENT'
+  blacklist: []
+  skills: 
+  - 'Fireball'
+  - 'Clear'
+  - 'Group Heal'
+  - 'Blood Slash'
+  - 'Lightning'
+  icon: 'PUMPKIN'
+  'icon-data': 0
+  'icon-durability': 0
+  'icon-lore': 
+  - 'Warrior'
+  'exp-source': 273
+  'combo-starters': 
+    L: 
+      inverted: 'true'
+      whitelist: []
+    RS: 
+      inverted: 'true'
+      whitelist: []
+    S: 
+      inverted: 'true'
+      whitelist: []
+    Q: 
+      inverted: 'true'
+      whitelist: []
+    P: 
+      inverted: 'true'
+      whitelist: []
+    LS: 
+      inverted: 'true'
+      whitelist: []
+    R: 
+      inverted: 'true'
+      whitelist: []
+    F: 
+      inverted: 'true'
+      whitelist: []

@@ -1,0 +1,63 @@
+base_class: 
+  name: 'base_class'
+  'action-bar': ''
+  prefix: 'Default'
+  group: 'base'
+  mana: '&2Mana'
+  'max-level': 1
+  parent: ''
+  'needs-permission': 'false'
+  attributes: 
+    'health-base': '0'
+    'health-scale': '0'
+    'mana-base': '0'
+    'mana-scale': '0'
+    'vitality-base': '0'
+    'vitality-scale': '0'
+    'spirit-base': '0'
+    'spirit-scale': '0'
+    'intelligence-base': '0'
+    'intelligence-scale': '0'
+    'dexterity-base': '0'
+    'dexterity-scale': '0'
+    'strength-base': '0'
+    'strength-scale': '0'
+  'mana-regen': 1.0
+  'skill-tree': 'REQUIREMENT'
+  blacklist: []
+  skills: 
+  - 'Scatter Bolt'
+  - 'Poison Burst'
+  - 'Fire Skill Burst'
+  - 'Explosive Bomb'
+  icon: 'PUMPKIN'
+  'icon-data': 0
+  'icon-durability': 0
+  'icon-lore': 
+  - 'base_class'
+  'exp-source': 273
+  'combo-starters': 
+    L: 
+      inverted: 'true'
+      whitelist: []
+    RS: 
+      inverted: 'true'
+      whitelist: []
+    S: 
+      inverted: 'true'
+      whitelist: []
+    Q: 
+      inverted: 'true'
+      whitelist: []
+    P: 
+      inverted: 'true'
+      whitelist: []
+    LS: 
+      inverted: 'true'
+      whitelist: []
+    R: 
+      inverted: 'true'
+      whitelist: []
+    F: 
+      inverted: 'true'
+      whitelist: []

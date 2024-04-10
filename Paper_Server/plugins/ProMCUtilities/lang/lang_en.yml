@@ -1,0 +1,53 @@
+economy:
+  no-money: '&cYou don''t have enough money! You need $<needed> but you have $<player.money>,
+    missing: $<missing>'
+  no-points: '&cYou don''t have enough points! You need $<needed> but you have $<player.points>,
+    missing: $<missing>'
+  'yes': 'yes'
+  'no': 'no'
+  useWithConfirm: '&cYou are trying to use $<riseItem.id> power item, type "$<yes>"
+    on chat to confirm, or "$<no>" to cancel. (will be cancelled after $<economyConfig.timeout>
+    secs)'
+  canNotDrop: '&cYou can''t drop this item!'
+  canNotTrade: '&cYou can''t trade this item!'
+  used: '&3Consumed your power item ($<riseItem.id>)!'
+  timeout: '&cYou canceled using item ($<riseItem.id>) by not typing $<yes> on chat
+    in $<economyConfig.timeout> seconds'
+  cancel: '&cYou canceled using item ($<riseItem.id>) by typing $<no> on chat.'
+  canNotFindItem: '&cWhere is your power item ($<riseItem.id>)? Did you try hide it
+    before confirming?'
+  commands:
+    claim:
+      pending: You have some items to claim! /econ claim
+      claimed: You claimed $<amount> items
+    give:
+      success: '&3Successfully given $<player> &a$<riseItem.name>'
+    drop:
+      success: '&3Successfully dropped item &a$<riseItem.name> &3at $<player>''s feet'
+    noItem: '&cCan''t find item with id/name ''&r$<name>&c''.'
+    delete: '&fDeleted ''&r$<riseItem.id>&7'' item.'
+    create:
+      no-item: '&7You must have some item in hand.'
+      done: '&7Saved new item.'
+    voucher:
+      already-used: '&cThe voucher ID #$<voucher_id> has already been used! Contact
+        staff if you need further help.'
+      info: 'Voucher #$<voucher_id> has been used by $<player.name> on $<date>'
+      info-unused: 'Voucher #$<voucher_id> has not been used yet.'
+    items:
+      list-header: '&7============= &3Items &7============='
+      list-entry: '&3$<index>. &f$<riseItem.id> &7- $<riseItem.name>&r'
+      list-footer: '&7============ &3Page: &8$<page> &7============'
+    help: |-
+      You typed: &7$<text>&r
+       Valid syntax:
+         &8/&7pmcu &ritems list &8[&7page&8]
+         &8/&7pmcu &ritems give &8<&7id&8>
+         &8/&7pmcu &ritems give &8<&7player&8> &8<&7id&8> [&7amount&8]
+         &8/&7pmcu &ritems drop &8<&7id&8>
+         &8/&7pmcu &ritems drop &8<&7player&8> &8<&7id&8> [&7amount&8]
+         &8/&7pmcu &ritems create &8<&7id&8> [&7-file&8 <&7fileName&8>] [&7-dropOnDeath&8] [&7-confirmOnUse&8] [&7-CantDrop&8] [&7-removeOnDeath&8 <&7amount&8>] [&7-removeOnUse&8 <&7amount&8>] [&7-durability&8 <&7from&8>&f-&8<&7to&8>]
+         &8/&7pmcu &ritems delete &8<&7id&8>
+         &8/&7pmcu &rclaim
+         &8/&7pmcu &rreload
+         &8/&7pmcu &rsave

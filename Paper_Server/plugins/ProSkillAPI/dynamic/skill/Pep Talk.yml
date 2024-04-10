@@ -1,0 +1,96 @@
+'Pep Talk': 
+  name: 'Pep Talk'
+  type: 'Enhancement'
+  'max-level': 5
+  'skill-req-lvl': 0
+  'needs-permission': 'false'
+  'cooldown-message': 'true'
+  attributes: 
+    'level-base': '1'
+    'level-scale': '0'
+    'cost-base': '3'
+    'cost-scale': '0'
+    'cooldown-base': '10'
+    'cooldown-scale': '-1'
+    'mana-base': '0'
+    'mana-scale': '0'
+    'points-spent-req-base': '0'
+    'points-spent-req-scale': '0'
+    incompatible: []
+  msg: '&6{player} &2has cast &6{skill}'
+  icon: 'IRON_INGOT'
+  'icon-data': 0
+  'icon-durability': 0
+  'icon-lore': 
+  - '&d{name} &7({level}/{max})'
+  - '&2Type: &6{type}'
+  - ''
+  - '{req:level}Level: {attr:level}'
+  - '{req:cost}Cost: {attr:cost}'
+  - ''
+  - '&2Mana: {attr:mana}'
+  - '&2Cooldown: {attr:cooldown}'
+  - ''
+  - '&6Listen guys, we need to talk...'
+  desc: []
+  components: 
+    'Took Physical Damage': 
+      type: 'trigger'
+      data: 
+        mana: 'true'
+        cooldown: 'true'
+        target: 'true'
+        type: 'Both'
+        'dmg-min': '0'
+        'dmg-max': '999'
+      preview: 
+        enabled: 'false'
+      children: 
+        Area: 
+          type: 'target'
+          data: 
+            'icon-key': ''
+            'radius-base': '3'
+            'radius-scale': '0'
+            group: 'Ally'
+            wall: 'false'
+            invulnerable: 'false'
+            caster: 'True'
+            'max-base': '99'
+            'max-scale': '0'
+            random: 'false'
+          preview: 
+            enabled: 'false'
+            'per-target': 'false'
+            circle: 'false'
+            sphere: 'false'
+          children: 
+            Buff: 
+              type: 'mechanic'
+              data: 
+                'icon-key': ''
+                counts: 'true'
+                immediate: 'false'
+                type: 'DEFENSE'
+                modifier: 'Flat'
+                'value-base': '2'
+                'value-scale': '0'
+                'seconds-base': '4'
+                'seconds-scale': '0'
+              preview: 
+                enabled: 'false'
+              children: {}
+            Potion: 
+              type: 'mechanic'
+              data: 
+                'icon-key': ''
+                counts: 'true'
+                potion: 'Speed'
+                ambient: 'true'
+                'tier-base': '1'
+                'tier-scale': '0'
+                'seconds-base': '3'
+                'seconds-scale': '1'
+              preview: 
+                enabled: 'false'
+              children: {}

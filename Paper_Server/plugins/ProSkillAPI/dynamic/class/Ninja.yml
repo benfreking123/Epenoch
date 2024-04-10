@@ -1,0 +1,61 @@
+Ninja: 
+  name: 'Ninja'
+  'action-bar': ''
+  prefix: '&6Ninja'
+  group: 'class'
+  mana: '&2Mana'
+  'max-level': 40
+  parent: ''
+  'needs-permission': 'false'
+  attributes: 
+    'health-base': '25'
+    'health-scale': '3'
+    'mana-base': '15'
+    'mana-scale': '1'
+    'vitality-base': '4'
+    'vitality-scale': '1'
+    'spirit-base': '5'
+    'spirit-scale': '2'
+    'intelligence-base': '4'
+    'intelligence-scale': '1'
+    'dexterity-base': '6'
+    'dexterity-scale': '2'
+    'strength-base': '5'
+    'strength-scale': '1'
+  'mana-regen': 2.0
+  'skill-tree': 'REQUIREMENT'
+  blacklist: []
+  skills: 
+  - 'Clear'
+  - 'Smoke Bomb'
+  icon: 'PUMPKIN'
+  'icon-data': 0
+  'icon-durability': 0
+  'icon-lore': 
+  - 'Ninja'
+  'exp-source': 273
+  'combo-starters': 
+    L: 
+      inverted: 'true'
+      whitelist: []
+    RS: 
+      inverted: 'true'
+      whitelist: []
+    S: 
+      inverted: 'true'
+      whitelist: []
+    Q: 
+      inverted: 'true'
+      whitelist: []
+    P: 
+      inverted: 'true'
+      whitelist: []
+    LS: 
+      inverted: 'true'
+      whitelist: []
+    R: 
+      inverted: 'true'
+      whitelist: []
+    F: 
+      inverted: 'true'
+      whitelist: []

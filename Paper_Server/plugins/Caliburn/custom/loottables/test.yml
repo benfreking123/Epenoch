@@ -1,0 +1,82 @@
+'12':
+  item:
+    ==: org.bukkit.inventory.ItemStack
+    v: 3465
+    type: TURTLE_HELMET
+    meta:
+      ==: ItemMeta
+      meta-type: ARMOR
+      display-name: '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"white","text":"Broken
+        Helmet of Wild Cat"}],"text":""}'
+      lore:
+      - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"gray","text":"Tier:
+        "},{"italic":false,"color":"white","text":"Common"}],"text":""}'
+      - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"gray","text":"Level:
+        "},{"italic":false,"color":"white","text":"19"}],"text":""}'
+      - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"red","text":"▸
+        Sharpness II"}],"text":""}'
+      - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"red","text":"▸
+        Efficiency I"}],"text":""}'
+      - '{"text":""}'
+      - '{"extra":[{"bold":true,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"green","text":"✓
+        "},{"bold":false,"italic":false,"color":"green","text":"Banned Player Class:
+        "},{"italic":false,"color":"white","text":"Gunner"},{"italic":false,"color":"gray","text":"/"},{"italic":false,"color":"white","text":"Archer"}],"text":""}'
+      - '{"extra":[{"bold":true,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"red","text":"✗
+        "},{"bold":false,"italic":false,"color":"red","text":"Player Level: "},{"italic":false,"color":"white","text":"11-20"}],"text":""}'
+      - '{"text":""}'
+      - '{"text":""}'
+      - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"gold","text":"▸
+        Physical Defense: "},{"italic":false,"color":"white","text":"8.59 "}],"text":""}'
+      - '{"text":""}'
+      - '{"text":""}'
+      - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"gray","text":"▸
+        Durability: "},{"italic":false,"color":"white","text":"868"},{"italic":false,"color":"gray","text":"/"},{"italic":false,"color":"white","text":"868"}],"text":""}'
+      - '{"text":""}'
+      - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"dark_aqua","text":"Spirit"},{"italic":false,"color":"gray","text":":
+        "},{"italic":false,"color":"gray","text":"+1"}],"text":""}'
+      - '{"extra":[{"bold":true,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"red","text":"✗
+        "},{"bold":false,"italic":false,"color":"red","text":"Player Class: "},{"italic":false,"color":"white","text":"Warrior"},{"italic":false,"color":"gray","text":"/"},{"italic":false,"color":"white","text":"Cleric"}],"text":""}'
+      custom-model-data: 22
+      enchants:
+        DIG_SPEED: 1
+        DAMAGE_ALL: 2
+      attribute-modifiers:
+        GENERIC_ARMOR:
+        - ==: org.bukkit.attribute.AttributeModifier
+          amount: 2.0
+          name: generic.armor
+          slot: HEAD
+          uuid: 051f1173-9999-3333-5555-99cb0245f9c1
+          operation: 0
+      ItemFlags:
+      - HIDE_ENCHANTS
+      - HIDE_ATTRIBUTES
+      - HIDE_UNBREAKABLE
+      - HIDE_DESTROYS
+      - HIDE_PLACED_ON
+      - HIDE_POTION_EFFECTS
+      - HIDE_DYE
+      - HIDE_ARMOR_TRIM
+      Unbreakable: true
+      PublicBukkitValues:
+        prorpgitems:item_stat_durability: '[B;64B,-117B,34B,-11B,-62B,-113B,92B,41B,64B,-117B,34B,-11B,-62B,-113B,92B,41B]'
+        promccore:fogus_loren-item_user_banned_class: '§a§l✓ §aBanned Player Class:
+          §fGunner§7/§fArcher'
+        prorpgitems:item_charges: '[I;-1,-1]'
+        promccore:fogus_loren-item_charges: '§7Charges: §fUnlimited'
+        prorpgitems:item_user_level: '[I;11,20]'
+        prorpgitems:item_id: common
+        prorpgitems:item_skillapi_attr_spirit: 1i
+        promccore:fogus_loren-item_skillapi_attr_spirit: '§3Spirit§7: §7+1'
+        prorpgitems:item_module: item_generator
+        prorpgitems:item_user_banned_class: '[B;0B,0B,0B,6B,71B,117B,110B,110B,101B,114B,0B,0B,0B,6B,65B,114B,99B,104B,101B,114B]'
+        prorpgitems:item_level: 19i
+        promccore:fogus_loren-item_user_class: '§c§l✗ §cPlayer Class: §fWarrior§7/§fCleric'
+        prorpgitems:item_defense_physical0:
+          prorpgitems:value: 8.59d
+        promccore:fogus_loren-item_defense_physical0: '§6▸ Physical Defense: §f8.59 '
+        promccore:fogus_loren-set_cache: ''
+        prorpgitems:item_user_class: '[B;0B,0B,0B,7B,87B,97B,114B,114B,105B,111B,114B,0B,0B,0B,6B,67B,108B,101B,114B,105B,99B]'
+        promccore:fogus_loren-item_user_level: '§c§l✗ §cPlayer Level: §f11-20'
+        promccore:fogus_loren-item_stat_durability: '§7▸ Durability: §f868§7/§f868'
+  chance: 100.0

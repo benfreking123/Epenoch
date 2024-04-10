@@ -1,0 +1,274 @@
+
+open_command: skilltree_scout
+size: 54
+menu_title: 'Scout Skill Tree %sapi_default_currentavailableskillpoints%'
+open_requirement:
+  requirements:
+    permission:
+      type: has permission
+      permission: deluxemenus.admin
+      deny_commands:
+        - '[message] &cYou don''t have permission to do that!'
+items:
+  'slot_11':
+    material: GOLD_INGOT
+    model_data: 128007
+    data: 1
+    slot: 11
+    priority: 20
+    display_name: "&a"
+    lore:
+      - "Customize this lore based on the slot's details"
+    click_requirement:
+      minimum_requirements: 2
+      stop_at_success: true
+      requirements:
+        money:
+          type: '>='
+          input: '%sapi_default_currentavailableskillpoints%'
+          output: '1'
+          optional: false
+          deny_commands:
+            - '[message] &6&lSkill&eTree &8» &7You don''t have enough Skill Points!'
+        req1:
+          type: has permission
+          permission: skilltree.node_1
+          optional: true
+    click_commands:
+      - '[message] &6&lSkill&eTree &8> &7You have unlocked &a'
+      - '[console] lp user %player_name% permission set skilltree. true'
+      - '[console] class forceattr %player_name% player_attribute_dexterity_mod 10'
+      - '[console] class forceattr %player_name% player_attribute_intelligence_mod 10'
+      - '[console] class forceattr %player_name% player_attribute_luck_mod 10'
+      - '[console] class forceattr %player_name% player_attribute_spirit_mod 10'
+      - '[console] class forceattr %player_name% player_attribute_strength_mod 10'
+      - '[console] class forceattr %player_name% player_attribute_vitality_mod 10'
+      - '[console] class forcepoints add %player_name% -1'
+  'slot_11_complete':
+    material: LEATHER
+    data: 1
+    slot: 11
+    priority: 10
+    display_name: "&aComplete: "
+    lore:
+      - "&aAllocated"
+      - "Customize this lore based on the slot's details"
+    view_requirement:
+      requirements:
+        permission:
+          type: has permission
+          permission: skilltree.
+  'slot_18':
+    material: GOLD_INGOT
+    model_data: 128001
+    data: 1
+    slot: 18
+    priority: 20
+    display_name: "&aAttr 1"
+    lore:
+      - "Customize this lore based on the slot's details"
+    click_requirement:
+      minimum_requirements: 2
+      stop_at_success: true
+      requirements:
+        money:
+          type: '>='
+          input: '%sapi_default_currentavailableskillpoints%'
+          output: '1'
+          optional: false
+          deny_commands:
+            - '[message] &6&lSkill&eTree &8» &7You don''t have enough Skill Points!'
+        req1:
+          type: has permission
+          permission: skilltree.starter_ability
+          optional: true
+    click_commands:
+      - '[message] &6&lSkill&eTree &8> &7You have unlocked &aAttr 1'
+      - '[console] lp user %player_name% permission set skilltree.attr_1 true'
+      - '[console] class forceattr %player_name% player_attribute_vitality_mod 10'
+      - '[console] class forcepoints add %player_name% -1'
+  'slot_18_complete':
+    material: LEATHER
+    data: 1
+    slot: 18
+    priority: 10
+    display_name: "&aComplete: Attr 1"
+    lore:
+      - "&aAllocated"
+      - "Customize this lore based on the slot's details"
+    view_requirement:
+      requirements:
+        permission:
+          type: has permission
+          permission: skilltree.attr_1
+  'slot_19':
+    material: GOLD_INGOT
+    model_data: 128001
+    data: 1
+    slot: 19
+    priority: 20
+    display_name: "&aAttr 2"
+    lore:
+      - "Customize this lore based on the slot's details"
+    click_requirement:
+      minimum_requirements: 2
+      stop_at_success: true
+      requirements:
+        money:
+          type: '>='
+          input: '%sapi_default_currentavailableskillpoints%'
+          output: '1'
+          optional: false
+          deny_commands:
+            - '[message] &6&lSkill&eTree &8» &7You don''t have enough Skill Points!'
+        req1:
+          type: has permission
+          permission: skilltree.attr_1
+          optional: true
+    click_commands:
+      - '[message] &6&lSkill&eTree &8> &7You have unlocked &aAttr 2'
+      - '[console] lp user %player_name% permission set skilltree.attr_2 true'
+      - '[console] class forceattr %player_name% player_attribute_strength_mod 10'
+      - '[console] class forceattr %player_name% player_attribute_vitality_mod 10'
+      - '[console] class forcepoints add %player_name% -1'
+  'slot_19_complete':
+    material: LEATHER
+    data: 1
+    slot: 19
+    priority: 10
+    display_name: "&aComplete: Attr 2"
+    lore:
+      - "&aAllocated"
+      - "Customize this lore based on the slot's details"
+    view_requirement:
+      requirements:
+        permission:
+          type: has permission
+          permission: skilltree.attr_2
+  'slot_20':
+    material: GOLD_INGOT
+    model_data: 128017
+    data: 1
+    slot: 20
+    priority: 20
+    display_name: "&aNode 1"
+    lore:
+      - "Customize this lore based on the slot's details"
+    click_requirement:
+      minimum_requirements: 2
+      stop_at_success: true
+      requirements:
+        money:
+          type: '>='
+          input: '%sapi_default_currentavailableskillpoints%'
+          output: '1'
+          optional: false
+          deny_commands:
+            - '[message] &6&lSkill&eTree &8» &7You don''t have enough Skill Points!'
+        req1:
+          type: has permission
+          permission: skilltree.attr_2
+          optional: true
+    click_commands:
+      - '[message] &6&lSkill&eTree &8> &7You have unlocked &aNode 1'
+      - '[console] lp user %player_name% permission set skilltree.node_1 true'
+      - '[console] class forceattr %player_name% poison_base _dmg_mod 10'
+      - '[console] class forceattr %player_name% poison_duration_mod 10'
+      - '[console] class forceattr %player_name% poison_percent_cooldown_mod 10'
+      - '[console] class forceattr %player_name% poison_percent_dmg_mod 10'
+      - '[console] class forcepoints add %player_name% -1'
+  'slot_20_complete':
+    material: LEATHER
+    data: 1
+    slot: 20
+    priority: 10
+    display_name: "&aComplete: Node 1"
+    lore:
+      - "&aAllocated"
+      - "Customize this lore based on the slot's details"
+    view_requirement:
+      requirements:
+        permission:
+          type: has permission
+          permission: skilltree.node_1
+  'slot_21':
+    material: STONE
+    model_data: 0
+    data: 1
+    slot: 21
+    priority: 20
+    display_name: "&a"
+    lore:
+      - "Customize this lore based on the slot's details"
+    click_requirement:
+      minimum_requirements: 2
+      stop_at_success: true
+      requirements:
+        money:
+          type: '>='
+          input: '%sapi_default_currentavailableskillpoints%'
+          output: '1'
+          optional: false
+          deny_commands:
+            - '[message] &6&lSkill&eTree &8» &7You don''t have enough Skill Points!'
+    click_commands:
+      - '[message] &6&lSkill&eTree &8> &7You have unlocked &a'
+      - '[console] lp user %player_name% permission set skilltree. true'
+      - '[console] class forcepoints add %player_name% -1'
+  'slot_21_complete':
+    material: LEATHER
+    data: 1
+    slot: 21
+    priority: 10
+    display_name: "&aComplete: "
+    lore:
+      - "&aAllocated"
+      - "Customize this lore based on the slot's details"
+    view_requirement:
+      requirements:
+        permission:
+          type: has permission
+          permission: skilltree.
+  'slot_29':
+    material: GOLD_INGOT
+    model_data: 128026
+    data: 1
+    slot: 29
+    priority: 20
+    display_name: "&aSkill 1"
+    lore:
+      - "Customize this lore based on the slot's details"
+    click_requirement:
+      minimum_requirements: 2
+      stop_at_success: true
+      requirements:
+        money:
+          type: '>='
+          input: '%sapi_default_currentavailableskillpoints%'
+          output: '1'
+          optional: false
+          deny_commands:
+            - '[message] &6&lSkill&eTree &8» &7You don''t have enough Skill Points!'
+        req1:
+          type: has permission
+          permission: skilltree.node_1
+          optional: true
+    click_commands:
+      - '[message] &6&lSkill&eTree &8> &7You have unlocked &aSkill 1'
+      - '[console] lp user %player_name% permission set skilltree.Skill_1 true'
+      - '[console] class forceskill %player_name% up test_skill'
+      - '[console] class forcepoints add %player_name% -1'
+  'slot_29_complete':
+    material: LEATHER
+    data: 1
+    slot: 29
+    priority: 10
+    display_name: "&aComplete: Skill 1"
+    lore:
+      - "&aAllocated"
+      - "Customize this lore based on the slot's details"
+    view_requirement:
+      requirements:
+        permission:
+          type: has permission
+          permission: skilltree.Skill_1

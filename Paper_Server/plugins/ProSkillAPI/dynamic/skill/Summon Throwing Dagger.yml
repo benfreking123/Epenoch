@@ -1,0 +1,119 @@
+'Summon Throwing Dagger': 
+  name: 'Summon Throwing Dagger'
+  type: 'Dynamic'
+  'max-level': 5
+  'skill-req-lvl': 0
+  'needs-permission': 'false'
+  'cooldown-message': 'true'
+  attributes: 
+    'level-base': '1'
+    'level-scale': '0'
+    'cost-base': '1'
+    'cost-scale': '0'
+    'cooldown-base': '1'
+    'cooldown-scale': '0'
+    'mana-base': '0'
+    'mana-scale': '0'
+    'points-spent-req-base': '0'
+    'points-spent-req-scale': '0'
+    incompatible: []
+  msg: '&6{player} &2has cast &6{skill}'
+  icon: 'STONE_SWORD'
+  'icon-data': 0
+  'icon-durability': 0
+  'icon-lore': 
+  - '&d{name} &7({level}/{max})'
+  - '&2Type: &6{type}'
+  - ''
+  - '{req:level}Level: {attr:level}'
+  - '{req:cost}Cost: {attr:cost}'
+  - 'Damage: {attr:damage.Value}'
+  - 'Range:  {attr:range.Range}'
+  - '&2Mana: {attr:mana}'
+  - '&2Cooldown: {attr:cooldown}'
+  desc: []
+  components: 
+    'Cast-0': 
+      type: 'trigger'
+      data: {}
+      preview: 
+        enabled: 'false'
+      children: 
+        Single: 
+          type: 'target'
+          data: 
+            'icon-key': 'range'
+            'range-base': '10'
+            'range-scale': '0'
+            'tolerance-base': '3'
+            'tolerance-scale': '0'
+            group: 'Enemy'
+            wall: 'false'
+            invulnerable: 'false'
+            caster: 'false'
+          preview: 
+            enabled: 'false'
+            'per-target': 'false'
+            line: 'false'
+            cylinder: 'false'
+          children: 
+            Projectile: 
+              type: 'mechanic'
+              data: 
+                'icon-key': ''
+                counts: 'true'
+                projectile: 'Trident'
+                flaming: 'false'
+                cost: 'None'
+                'override-item': 'false'
+                homing: 'false'
+                'velocity-base': '4'
+                'velocity-scale': '0'
+                'lifespan-base': '10'
+                'lifespan-scale': '0'
+                'on-expire': 'false'
+                spread: 'Horizontal Cone'
+                'amount-base': '1'
+                'amount-scale': '0'
+                'angle-base': '30'
+                'angle-scale': '0'
+                'forward-base': '0'
+                'forward-scale': '0'
+                'upward-base': '0'
+                'upward-scale': '0'
+                'right-base': '0'
+                'right-scale': '0'
+                particle: 'Crit'
+                arrangement: 'Sphere'
+                'radius-base': '1'
+                'radius-scale': '0'
+                'particles-base': '20'
+                'particles-scale': '0'
+                'visible-radius': '25'
+                dx: '0'
+                dy: '0'
+                dz: '0'
+                amount: '1'
+                speed: '0.1'
+                'use-effect': 'false'
+              preview: 
+                enabled: 'false'
+                period: '5'
+                'per-target': 'false'
+                path: 'false'
+              children: {}
+            Damage: 
+              type: 'mechanic'
+              data: 
+                'icon-key': 'damage'
+                counts: 'true'
+                type: 'Damage'
+                'value-base': '40'
+                'value-scale': '1'
+                true: 'false'
+                classifier: 'default'
+                knockback: 'true'
+                cause: 'Custom'
+              preview: 
+                enabled: 'false'
+              children: {}

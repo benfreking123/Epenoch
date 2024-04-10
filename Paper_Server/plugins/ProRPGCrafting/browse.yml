@@ -1,0 +1,40 @@
+name: '&3&lBrowse'
+fillItem:
+  ==: org.bukkit.inventory.ItemStack
+  v: 3465
+  type: BLACK_STAINED_GLASS_PANE
+  meta:
+    ==: ItemMeta
+    meta-type: UNSPECIFIC
+    display-name: '{"extra":[{"text":" "}],"text":""}'
+pattern:
+  pattern:
+  - '111101111'
+  - ooooooooo
+  - ooooooooo
+  commands: {}
+  items:
+    '0':
+      material: BIRCH_SIGN
+      amount: 1
+      durability: 0
+      unbreakable: false
+      name: §3Crafting Groups
+      lore:
+      - §7Select a group to get started!
+      flags: []
+      enchants: {}
+      data: null
+    '1':
+      material: CYAN_STAINED_GLASS_PANE
+      amount: 1
+      durability: 0
+      unbreakable: false
+      name: ' '
+      lore: []
+      flags: []
+      enchants: {}
+      data: null
+professions:
+  smelting:
+    cost: 10

@@ -1,0 +1,32 @@
+# Commands executed for player on login. This placeholders are supported:
+# {player} - name of player
+onJoin:
+- delay: 100
+  as: CONSOLE
+  cmd: give {player} cookie 1
+onFirstJoin:
+- delay: 100
+  as: CONSOLE
+  cmd: give {player} cookie 1
+onInteract:
+- material: CRAFTING_TABLE
+  type: -1
+  cancelAction: true
+  delayedCommands:
+  - delay: 0
+    as: CONSOLE
+    cmd: give {player} cookie 1
+- material: FURNACE
+  type: -1
+  cancelAction: true
+  delayedCommands:
+  - delay: 0
+    as: CONSOLE
+    cmd: give {player} cookie 1
+debug: false
+removeBoatOnExit: false
+bungee: false
+bungee_id: server
+unstuck:
+  cooldown: 30
+  warmup: 5

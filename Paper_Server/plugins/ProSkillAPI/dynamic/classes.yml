@@ -1,0 +1,380 @@
+loaded: 'true'
+Mage: 
+  name: 'Mage'
+  'action-bar': ''
+  prefix: '&6Mage'
+  group: 'class'
+  mana: '&2Mana'
+  'max-level': 120
+  parent: ''
+  'needs-permission': 'false'
+  attributes: 
+    'health-base': '25'
+    'health-scale': '4'
+    'mana-base': '30'
+    'mana-scale': '5'
+    'vitality-base': '2'
+    'vitality-scale': '3'
+    'spirit-base': '3'
+    'spirit-scale': '2'
+    'intelligence-base': '5'
+    'intelligence-scale': '2'
+    'dexterity-base': '4'
+    'dexterity-scale': '4'
+    'strength-base': '2'
+    'strength-scale': '3'
+  'mana-regen': 4.0
+  'skill-tree': 'REQUIREMENT'
+  blacklist: []
+  skills: 
+  - 'Clear'
+  - 'Fireball'
+  - 'Group Heal'
+  - 'Lightning'
+  - 'Roll'
+  - 'Smoke Bomb'
+  - 'Poison Damage'
+  icon: 'AMETHYST_SHARD'
+  'icon-data': 0
+  'icon-durability': 0
+  'icon-lore': 
+  - 'Mage'
+  'exp-source': 273
+  'combo-starters': 
+    L: 
+      inverted: 'true'
+      whitelist: []
+    RS: 
+      inverted: 'true'
+      whitelist: []
+    S: 
+      inverted: 'true'
+      whitelist: []
+    Q: 
+      inverted: 'true'
+      whitelist: []
+    P: 
+      inverted: 'true'
+      whitelist: []
+    LS: 
+      inverted: 'true'
+      whitelist: []
+    R: 
+      inverted: 'true'
+      whitelist: []
+    F: 
+      inverted: 'true'
+      whitelist: []
+Hunter: 
+  name: 'Hunter'
+  'action-bar': ''
+  prefix: '&6Class 1'
+  group: 'class'
+  mana: '&2Mana'
+  'max-level': 40
+  parent: ''
+  'needs-permission': 'false'
+  attributes: 
+    'health-base': '20'
+    'health-scale': '1'
+    'mana-base': '20'
+    'mana-scale': '1'
+    'vitality-base': '0'
+    'vitality-scale': '0'
+    'spirit-base': '0'
+    'spirit-scale': '0'
+    'intelligence-base': '0'
+    'intelligence-scale': '0'
+    'dexterity-base': '0'
+    'dexterity-scale': '0'
+    'strength-base': '0'
+    'strength-scale': '0'
+  'mana-regen': 1.0
+  'skill-tree': 'REQUIREMENT'
+  blacklist: []
+  skills: 
+  - 'Summon Throwing Dagger'
+  - 'Roll'
+  - 'Smoke Bomb'
+  - 'Sword Buffs'
+  icon: 'PUMPKIN'
+  'icon-data': 0
+  'icon-durability': 0
+  'icon-lore': 
+  - 'Hunter'
+  'exp-source': 305
+  'combo-starters': 
+    L: 
+      inverted: 'true'
+      whitelist: []
+    RS: 
+      inverted: 'true'
+      whitelist: []
+    S: 
+      inverted: 'true'
+      whitelist: []
+    Q: 
+      inverted: 'true'
+      whitelist: []
+    P: 
+      inverted: 'true'
+      whitelist: []
+    LS: 
+      inverted: 'true'
+      whitelist: []
+    R: 
+      inverted: 'true'
+      whitelist: []
+    F: 
+      inverted: 'true'
+      whitelist: []
+Marksman: 
+  name: 'Marksman'
+  'action-bar': ''
+  prefix: '&Tower Guard'
+  group: 'class'
+  mana: '&2Mana'
+  'max-level': 80
+  parent: 'Ninja'
+  'needs-permission': 'false'
+  attributes: 
+    'health-base': '30'
+    'health-scale': '2'
+    'mana-base': '15'
+    'mana-scale': '3'
+    'vitality-base': '5'
+    'vitality-scale': '2'
+    'spirit-base': '3'
+    'spirit-scale': '4'
+    'intelligence-base': '2'
+    'intelligence-scale': '4'
+    'dexterity-base': '4'
+    'dexterity-scale': '4'
+    'strength-base': '3'
+    'strength-scale': '4'
+  'mana-regen': 3.0
+  'skill-tree': 'REQUIREMENT'
+  blacklist: []
+  skills: 
+  - 'Fireball'
+  - 'Summon Throwing Dagger'
+  - 'Pep Talk'
+  icon: 'PUMPKIN'
+  'icon-data': 0
+  'icon-durability': 0
+  'icon-lore': 
+  - 'Marksman'
+  'exp-source': 273
+  'combo-starters': 
+    L: 
+      inverted: 'true'
+      whitelist: []
+    RS: 
+      inverted: 'true'
+      whitelist: []
+    S: 
+      inverted: 'true'
+      whitelist: []
+    Q: 
+      inverted: 'true'
+      whitelist: []
+    P: 
+      inverted: 'true'
+      whitelist: []
+    LS: 
+      inverted: 'true'
+      whitelist: []
+    R: 
+      inverted: 'true'
+      whitelist: []
+    F: 
+      inverted: 'true'
+      whitelist: []
+Ninja: 
+  name: 'Ninja'
+  'action-bar': ''
+  prefix: '&6Ninja'
+  group: 'class'
+  mana: '&2Mana'
+  'max-level': 40
+  parent: ''
+  'needs-permission': 'false'
+  attributes: 
+    'health-base': '25'
+    'health-scale': '3'
+    'mana-base': '15'
+    'mana-scale': '1'
+    'vitality-base': '4'
+    'vitality-scale': '1'
+    'spirit-base': '5'
+    'spirit-scale': '2'
+    'intelligence-base': '4'
+    'intelligence-scale': '1'
+    'dexterity-base': '6'
+    'dexterity-scale': '2'
+    'strength-base': '5'
+    'strength-scale': '1'
+  'mana-regen': 2.0
+  'skill-tree': 'REQUIREMENT'
+  blacklist: []
+  skills: 
+  - 'Clear'
+  - 'Smoke Bomb'
+  icon: 'PUMPKIN'
+  'icon-data': 0
+  'icon-durability': 0
+  'icon-lore': 
+  - 'Ninja'
+  'exp-source': 273
+  'combo-starters': 
+    L: 
+      inverted: 'true'
+      whitelist: []
+    RS: 
+      inverted: 'true'
+      whitelist: []
+    S: 
+      inverted: 'true'
+      whitelist: []
+    Q: 
+      inverted: 'true'
+      whitelist: []
+    P: 
+      inverted: 'true'
+      whitelist: []
+    LS: 
+      inverted: 'true'
+      whitelist: []
+    R: 
+      inverted: 'true'
+      whitelist: []
+    F: 
+      inverted: 'true'
+      whitelist: []
+Warrior: 
+  name: 'Warrior'
+  'action-bar': ''
+  prefix: '&6Hardened Vet'
+  group: 'class'
+  mana: '&2Mana'
+  'max-level': 120
+  parent: 'Hunter'
+  'needs-permission': 'false'
+  attributes: 
+    'health-base': '50'
+    'health-scale': '5'
+    'mana-base': '35'
+    'mana-scale': '3'
+    'vitality-base': '10'
+    'vitality-scale': '2'
+    'spirit-base': '5'
+    'spirit-scale': '4'
+    'intelligence-base': '8'
+    'intelligence-scale': '3'
+    'dexterity-base': '6'
+    'dexterity-scale': '2'
+    'strength-base': '9'
+    'strength-scale': '3'
+  'mana-regen': 4.0
+  'skill-tree': 'REQUIREMENT'
+  blacklist: []
+  skills: 
+  - 'Fireball'
+  - 'Clear'
+  - 'Group Heal'
+  - 'Blood Slash'
+  - 'Lightning'
+  icon: 'PUMPKIN'
+  'icon-data': 0
+  'icon-durability': 0
+  'icon-lore': 
+  - 'Warrior'
+  'exp-source': 273
+  'combo-starters': 
+    L: 
+      inverted: 'true'
+      whitelist: []
+    RS: 
+      inverted: 'true'
+      whitelist: []
+    S: 
+      inverted: 'true'
+      whitelist: []
+    Q: 
+      inverted: 'true'
+      whitelist: []
+    P: 
+      inverted: 'true'
+      whitelist: []
+    LS: 
+      inverted: 'true'
+      whitelist: []
+    R: 
+      inverted: 'true'
+      whitelist: []
+    F: 
+      inverted: 'true'
+      whitelist: []
+base_class: 
+  name: 'base_class'
+  'action-bar': ''
+  prefix: 'Default'
+  group: 'base'
+  mana: '&2Mana'
+  'max-level': 1
+  parent: ''
+  'needs-permission': 'false'
+  attributes: 
+    'health-base': '0'
+    'health-scale': '0'
+    'mana-base': '0'
+    'mana-scale': '0'
+    'vitality-base': '0'
+    'vitality-scale': '0'
+    'spirit-base': '0'
+    'spirit-scale': '0'
+    'intelligence-base': '0'
+    'intelligence-scale': '0'
+    'dexterity-base': '0'
+    'dexterity-scale': '0'
+    'strength-base': '0'
+    'strength-scale': '0'
+  'mana-regen': 1.0
+  'skill-tree': 'REQUIREMENT'
+  blacklist: []
+  skills: 
+  - 'Scatter Bolt'
+  - 'Poison Burst'
+  - 'Fire Skill Burst'
+  - 'Explosive Bomb'
+  icon: 'PUMPKIN'
+  'icon-data': 0
+  'icon-durability': 0
+  'icon-lore': 
+  - 'base_class'
+  'exp-source': 273
+  'combo-starters': 
+    L: 
+      inverted: 'true'
+      whitelist: []
+    RS: 
+      inverted: 'true'
+      whitelist: []
+    S: 
+      inverted: 'true'
+      whitelist: []
+    Q: 
+      inverted: 'true'
+      whitelist: []
+    P: 
+      inverted: 'true'
+      whitelist: []
+    LS: 
+      inverted: 'true'
+      whitelist: []
+    R: 
+      inverted: 'true'
+      whitelist: []
+    F: 
+      inverted: 'true'
+      whitelist: []

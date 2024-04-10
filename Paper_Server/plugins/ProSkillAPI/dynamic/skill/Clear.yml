@@ -1,0 +1,53 @@
+Clear: 
+  name: 'Clear'
+  type: 'Dynamic'
+  'max-level': 5
+  'skill-req-lvl': 0
+  'needs-permission': 'false'
+  'cooldown-message': 'true'
+  attributes: 
+    'level-base': '0'
+    'level-scale': '0'
+    'cost-base': '3'
+    'cost-scale': '-1'
+    'cooldown-base': '20'
+    'cooldown-scale': '0'
+    'mana-base': '5'
+    'mana-scale': '-1'
+    'points-spent-req-base': '0'
+    'points-spent-req-scale': '0'
+    incompatible: []
+  msg: '&6{player} &2has cast &6{skill}'
+  icon: 'GLASS_BOTTLE'
+  'icon-data': 0
+  'icon-durability': 0
+  'icon-lore': 
+  - '&d{name} &7({level}/{max})'
+  - '&2Type: &6{type}'
+  - ''
+  - '{req:level}Level: {attr:level}'
+  - '{req:cost}Cost: {attr:cost}'
+  - ''
+  - '&2Mana: {attr:mana}'
+  - '&2Cooldown: {attr:cooldown}'
+  desc: []
+  components: 
+    Crouch: 
+      type: 'trigger'
+      data: 
+        mana: 'true'
+        cooldown: 'false'
+        type: 'Start Crouching'
+      preview: 
+        enabled: 'false'
+      children: 
+        Invisibility: 
+          type: 'mechanic'
+          data: 
+            'icon-key': ''
+            counts: 'true'
+            duration: '200'
+            hideEquipment: 'true'
+          preview: 
+            enabled: 'false'
+          children: {}

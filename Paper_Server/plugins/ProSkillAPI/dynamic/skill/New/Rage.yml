@@ -1,0 +1,109 @@
+Rage: 
+  name: 'Rage'
+  type: 'Dynamic'
+  'max-level': 5
+  'skill-req-lvl': 0
+  'needs-permission': 'false'
+  'cooldown-message': 'true'
+  attributes: 
+    'level-base': '1'
+    'level-scale': '0'
+    'cost-base': '1'
+    'cost-scale': '0'
+    'cooldown-base': '0'
+    'cooldown-scale': '0'
+    'mana-base': '0'
+    'mana-scale': '0'
+    'points-spent-req-base': '0'
+    'points-spent-req-scale': '0'
+    incompatible: []
+  msg: '&6{player} &2has cast &6{skill}'
+  icon: 'PUMPKIN'
+  'icon-data': 0
+  'icon-durability': 0
+  'icon-lore': 
+  - '&d{name} &7({level}/{max})'
+  - '&2Type: &6{type}'
+  - ''
+  - '{req:level}Level: {attr:level}'
+  - '{req:cost}Cost: {attr:cost}'
+  - ''
+  - '&2Mana: {attr:mana}'
+  - '&2Cooldown: {attr:cooldown}'
+  desc: []
+  components: 
+    'Cast-0': 
+      type: 'trigger'
+      data: {}
+      preview: 
+        enabled: 'false'
+      children: 
+        'Damage Buff': 
+          type: 'mechanic'
+          data: 
+            'icon-key': ''
+            counts: 'true'
+            type: 'Flat'
+            skill: 'false'
+            'value-base': '1'
+            'value-scale': '0'
+            'seconds-base': '3'
+            'seconds-scale': '0'
+          preview: 
+            enabled: 'false'
+          children: {}
+        Buff: 
+          type: 'mechanic'
+          data: 
+            'icon-key': ''
+            counts: 'true'
+            immediate: 'false'
+            type: 'DAMAGE'
+            modifier: 'Flat'
+            'value-base': '1'
+            'value-scale': '0'
+            'seconds-base': '3'
+            'seconds-scale': '0'
+          preview: 
+            enabled: 'false'
+          children: {}
+        Stat: 
+          type: 'mechanic'
+          data: 
+            'icon-key': ''
+            counts: 'true'
+            key: 'health'
+            operation: 'ADD_NUMBER'
+            'amount-base': '5'
+            'amount-scale': '2'
+            'seconds-base': '3'
+            'seconds-scale': '0'
+            stackable: 'false'
+          preview: 
+            enabled: 'false'
+          children: {}
+        Attribute: 
+          type: 'mechanic'
+          data: 
+            'icon-key': ''
+            counts: 'true'
+            key: 'Intelligence'
+            operation: 'ADD_NUMBER'
+            'amount-base': '5'
+            'amount-scale': '2'
+            'seconds-base': '3'
+            'seconds-scale': '0'
+            stackable: 'false'
+          preview: 
+            enabled: 'false'
+          children: {}
+        Passive: 
+          type: 'mechanic'
+          data: 
+            'icon-key': ''
+            counts: 'true'
+            'seconds-base': '1'
+            'seconds-scale': '0'
+          preview: 
+            enabled: 'false'
+          children: {}

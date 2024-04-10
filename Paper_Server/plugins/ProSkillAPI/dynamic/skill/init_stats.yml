@@ -1,0 +1,85 @@
+init_stats: 
+  name: 'init_stats'
+  type: 'Dynamic'
+  'max-level': 1
+  'skill-req-lvl': 0
+  'needs-permission': 'false'
+  'cooldown-message': 'true'
+  attributes: 
+    'level-base': '1'
+    'level-scale': '0'
+    'cost-base': '0'
+    'cost-scale': '0'
+    'cooldown-base': '0'
+    'cooldown-scale': '0'
+    'mana-base': '0'
+    'mana-scale': '0'
+    'points-spent-req-base': '0'
+    'points-spent-req-scale': '0'
+    incompatible: []
+  msg: '&6{player} &2has cast &6{skill}'
+  icon: 'PUMPKIN'
+  'icon-data': 0
+  'icon-durability': 0
+  'icon-lore': 
+  - '&d{name} &7({level}/{max})'
+  - '&2Type: &6{type}'
+  - ''
+  - '{req:level}Level: {attr:level}'
+  - '{req:cost}Cost: {attr:cost}'
+  - ''
+  - '&2Mana: {attr:mana}'
+  - '&2Cooldown: {attr:cooldown}'
+  desc: []
+  components: 
+    'Initialize-0': 
+      type: 'trigger'
+      data: {}
+      preview: 
+        enabled: 'false'
+      children: 
+        'Value Attribute': 
+          type: 'mechanic'
+          data: 
+            'icon-key': ''
+            counts: 'true'
+            key: 'player_percent_cooldown_mod'
+            attribute: 'player_percent_cooldown_mod'
+            save: 'true'
+          preview: 
+            enabled: 'false'
+          children: {}
+    'Initialize-1': 
+      type: 'trigger'
+      data: {}
+      preview: 
+        enabled: 'false'
+      children: 
+        'Value Attribute': 
+          type: 'mechanic'
+          data: 
+            'icon-key': ''
+            counts: 'true'
+            key: 'poison_percent_cooldown_mod'
+            attribute: 'poison_percent_cooldown_mod'
+            save: 'true'
+          preview: 
+            enabled: 'false'
+          children: {}
+    'Initialize-2': 
+      type: 'trigger'
+      data: {}
+      preview: 
+        enabled: 'false'
+      children: 
+        'Value Attribute': 
+          type: 'mechanic'
+          data: 
+            'icon-key': ''
+            counts: 'true'
+            key: 'projectile_percent_cooldown_mod'
+            attribute: 'projectile_percent_cooldown_mod'
+            save: 'true'
+          preview: 
+            enabled: 'false'
+          children: {}

@@ -1,0 +1,5 @@
+idType: LORE
+material: COOKIE
+meta:
+  ==: ItemMeta
+  meta-type: UNSPECIFIC

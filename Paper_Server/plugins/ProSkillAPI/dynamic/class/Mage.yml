@@ -1,0 +1,66 @@
+Mage: 
+  name: 'Mage'
+  'action-bar': ''
+  prefix: '&6Mage'
+  group: 'class'
+  mana: '&2Mana'
+  'max-level': 120
+  parent: ''
+  'needs-permission': 'false'
+  attributes: 
+    'health-base': '25'
+    'health-scale': '4'
+    'mana-base': '30'
+    'mana-scale': '5'
+    'vitality-base': '2'
+    'vitality-scale': '3'
+    'spirit-base': '3'
+    'spirit-scale': '2'
+    'intelligence-base': '5'
+    'intelligence-scale': '2'
+    'dexterity-base': '4'
+    'dexterity-scale': '4'
+    'strength-base': '2'
+    'strength-scale': '3'
+  'mana-regen': 4.0
+  'skill-tree': 'REQUIREMENT'
+  blacklist: []
+  skills: 
+  - 'Clear'
+  - 'Fireball'
+  - 'Group Heal'
+  - 'Lightning'
+  - 'Roll'
+  - 'Smoke Bomb'
+  - 'Poison Damage'
+  icon: 'AMETHYST_SHARD'
+  'icon-data': 0
+  'icon-durability': 0
+  'icon-lore': 
+  - 'Mage'
+  'exp-source': 273
+  'combo-starters': 
+    L: 
+      inverted: 'true'
+      whitelist: []
+    RS: 
+      inverted: 'true'
+      whitelist: []
+    S: 
+      inverted: 'true'
+      whitelist: []
+    Q: 
+      inverted: 'true'
+      whitelist: []
+    P: 
+      inverted: 'true'
+      whitelist: []
+    LS: 
+      inverted: 'true'
+      whitelist: []
+    R: 
+      inverted: 'true'
+      whitelist: []
+    F: 
+      inverted: 'true'
+      whitelist: []

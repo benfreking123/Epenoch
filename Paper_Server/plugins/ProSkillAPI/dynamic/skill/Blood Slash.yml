@@ -1,0 +1,107 @@
+'Blood Slash': 
+  name: 'Blood Slash'
+  type: 'Swords'
+  'max-level': 10
+  'skill-req-lvl': 0
+  'needs-permission': 'false'
+  'cooldown-message': 'true'
+  attributes: 
+    'level-base': '1'
+    'level-scale': '0'
+    'cost-base': '2'
+    'cost-scale': '1'
+    'cooldown-base': '20'
+    'cooldown-scale': '-2'
+    'mana-base': '0'
+    'mana-scale': '0'
+    'points-spent-req-base': '0'
+    'points-spent-req-scale': '0'
+    incompatible: []
+  msg: '&6{player} &2has cast &6{skill}'
+  icon: 'IRON_SWORD'
+  'icon-data': 0
+  'icon-durability': 0
+  'icon-lore': 
+  - '&d{name} &7({level}/{max})'
+  - '&2Type: &6{type}'
+  - ''
+  - '{req:level}Level: {attr:level}'
+  - '{req:cost}Cost: {attr:cost}'
+  - ''
+  - '&2Mana: {attr:mana}'
+  - '&2Cooldown: {attr:cooldown}'
+  - ''
+  - '&4A sharp red slash strikes across your ememies'
+  - ''
+  - '&cDamage: {attr:damage.value}'
+  desc: []
+  components: 
+    'Left Click': 
+      type: 'trigger'
+      data: 
+        mana: 'false'
+        cooldown: 'true'
+        crouch: 'Dont crouch'
+      preview: 
+        enabled: 'false'
+      children: 
+        Tool: 
+          type: 'condition'
+          data: 
+            'icon-key': ''
+            material: 'Any'
+            tool: 'Sword'
+          preview: 
+            enabled: 'false'
+          children: 
+            'Particle Animation': 
+              type: 'mechanic'
+              data: 
+                'icon-key': ''
+                counts: 'true'
+                steps: '1'
+                frequency: '0.05'
+                angle: '0'
+                start: '20'
+                'duration-base': '2'
+                'duration-scale': '0'
+                'h-translation-base': '0'
+                'h-translation-scale': '0'
+                'v-translation-base': '0'
+                'v-translation-scale': '0'
+                'h-cycles': '1'
+                'v-cycles': '1'
+                particle: 'Crimson spore'
+                arrangement: 'Hemisphere'
+                'radius-base': '1'
+                'radius-scale': '0'
+                'particles-base': '20'
+                'particles-scale': '0'
+                'visible-radius': '25'
+                dx: '100'
+                dy: '0'
+                dz: '0'
+                amount: '1'
+                speed: '0.1'
+                forward: '0'
+                upward: '0'
+                right: '0'
+                '-with-rotation': 'false'
+              preview: 
+                enabled: 'false'
+              children: {}
+            Damage: 
+              type: 'mechanic'
+              data: 
+                'icon-key': ''
+                counts: 'true'
+                type: 'Percent Missing'
+                'value-base': '2'
+                'value-scale': '1'
+                true: 'false'
+                classifier: 'default'
+                knockback: 'false'
+                cause: 'Custom'
+              preview: 
+                enabled: 'false'
+              children: {}

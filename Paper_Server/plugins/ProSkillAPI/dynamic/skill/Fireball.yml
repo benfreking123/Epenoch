@@ -1,0 +1,116 @@
+Fireball: 
+  name: 'Fireball'
+  type: 'AOE Projectile'
+  'max-level': 10
+  'skill-req-lvl': 1
+  'needs-permission': 'false'
+  'cooldown-message': 'true'
+  attributes: 
+    'level-base': '0'
+    'level-scale': '0'
+    'cost-base': '1'
+    'cost-scale': '0'
+    'cooldown-base': '2'
+    'cooldown-scale': '-1'
+    'mana-base': '5'
+    'mana-scale': '0'
+    'points-spent-req-base': '0'
+    'points-spent-req-scale': '0'
+    incompatible: []
+  msg: '&6{player} &2has cast &6{skill}'
+  icon: 'FIRE_CHARGE'
+  'icon-data': 0
+  'icon-durability': 0
+  'icon-lore': 
+  - '&d{name} &7({level}/{max})'
+  - '&2Type: &6{type}'
+  - ''
+  - '{req:level}Level: {attr:level}'
+  - '{req:cost}Cost: {attr:cost}'
+  - ''
+  - '&2Mana: {attr:mana}'
+  - '&2Cooldown: {attr:cooldown}'
+  - ''
+  - '&3Shoots a powerful fireball that'
+  - '&3explodes on the target'
+  - ''
+  - '&4Feed the Flames'
+  - ''
+  - '&cDamage: {attr:damage.value}'
+  desc: []
+  components: 
+    'Cast-0': 
+      type: 'trigger'
+      data: {}
+      preview: 
+        enabled: 'false'
+      children: 
+        'Item Projectile': 
+          type: 'mechanic'
+          data: 
+            'icon-key': ''
+            counts: 'true'
+            group: 'Enemy'
+            walls: 'true'
+            'collision-radius-base': '0.2'
+            'collision-radius-scale': '0'
+            material: 'Fire charge'
+            amount: '1'
+            byte: '0'
+            'hide-flags': []
+            custom: 'false'
+            homing: 'false'
+            'velocity-base': '2'
+            'velocity-scale': '0'
+            'lifespan-base': '6'
+            'lifespan-scale': '0'
+            'on-expire': 'true'
+            spread: 'Cone'
+            'amount-base': '1'
+            'amount-scale': '0'
+            'angle-base': '30'
+            'angle-scale': '0'
+            'forward-base': '0'
+            'forward-scale': '0'
+            'upward-base': '0'
+            'upward-scale': '0'
+            'right-base': '0'
+            'right-scale': '0'
+            'use-effect': 'true'
+            'effect-key': 'default'
+            'duration-base': '1'
+            'duration-scale': '0'
+            '-shape': 'hexagon'
+            '-shape-dir': 'XY'
+            '-shape-size': '1'
+            '-animation': 'one-circle'
+            '-anim-dir': 'XZ'
+            '-anim-size': '1'
+            '-interval': '1'
+            '-view-range': '25'
+            '-particle-type': 'Flame'
+            '-particle-amount': '1'
+            '-particle-dx': '0'
+            '-particle-dy': '0'
+            '-particle-dz': '0'
+            '-particle-speed': '0.1'
+            '-initial-rotation': '0'
+            '-with-rotation': 'true'
+          preview: 
+            enabled: 'false'
+            period: '5'
+            'per-target': 'false'
+            path: 'false'
+          children: 
+            Explosion: 
+              type: 'mechanic'
+              data: 
+                'icon-key': ''
+                counts: 'true'
+                'power-base': '3'
+                'power-scale': '0'
+                damage: 'false'
+                fire: 'true'
+              preview: 
+                enabled: 'false'
+              children: {}
