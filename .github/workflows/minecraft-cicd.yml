@@ -15,7 +15,9 @@ jobs:
     - name: Setup SSH for EC2 Access
       uses: webfactory/ssh-agent@v0.5.3
       with:
-        ssh-private-key: ${{ secrets.MINECRAFT_SERVER }}
+        ssh-private-key: |
+          ${{ secrets.MINECRAFT_SERVER }}
+          ${{ secrets.AWS_MINECRAFT_SERVER }}
 
     - name: Update Minecraft Server and Restart Service
       run: |
